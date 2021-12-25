@@ -11,33 +11,18 @@
 </div>
 
 <div class="container">
-
   <div class='cards-home'>
-    <div class="row">
-      <% @listings.each do |listing| %>
-      <div class="col">
+    <% @listings.each do |listing| %>
         <%= link_to listing_path(listing) do %>
           <div class='card'>
-            <p> <%=  cl_image_tag listing.photo.key, height: 150, width: 298, crop: :fill %></p>
-              <div class='text'>
-                <h4><%= listing.name %></h4>
-              </div>
-              <div class='description'>
-                <h6> <strong>Description:</strong> <%= listing.description.first(70)%> ...</h6>
-              </div>
-              <div class='description'>
-                <h6><strong>Location:</strong> <%= listing.location %></h4>
-              </div>
-              <div class='description'>
-                <h6><strong>Price:</strong> <%= listing.price %> €</h4>
-              </div>
-              <div class='description'>
-                <h6><strong>Availability:</strong> <%= listing.availability %></h4>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+            <p> <%=  cl_image_tag listing.photo.key, height: 200, width: 300, crop: :fill %></p>
+            <h4><%= listing.name %></h4>
+            <h6> <strong>Description:</strong> <%= listing.description.first(70)%> ...</h6>
+            <h6><strong>Location:</strong> <%= listing.location %></h4>
+            <h6><strong>Price:</strong> <%= listing.price %> €</h4>
+            <h6><strong>Availability:</strong> <%= listing.availability %></h4>
+          </div>
+        <% end %>
+    <% end %>
   </div>
 </div>
