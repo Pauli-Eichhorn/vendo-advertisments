@@ -11,8 +11,8 @@ User.destroy_all
 
 puts 'everything destroyed'
 
-user1 = User.create!(email: "user1@gmail.com", password: "12345678")
-user2 = User.create!(email: "user2@gmail.com", password: "12345678")
+user1 = User.create!(email: "user1@gmail.com", password: "12345678", first_name: "Pauli", last_name: "Eichhorn", owner: true)
+user2 = User.create!(email: "user2@gmail.com", password: "12345678", first_name: "Carl", last_name: "Schierstädt", owner: false)
 
 puts 'user created'
 
@@ -44,4 +44,5 @@ listing1.save
 listing2.save
 listing3.save
 listing4.save
+
 puts 'saved'

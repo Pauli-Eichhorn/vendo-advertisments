@@ -7,7 +7,6 @@ class CreateListings < ActiveRecord::Migration[6.1]
       t.string :location
       t.date :availability
       t.references :user, null: false, foreign_key: true
-
       t.timestamps
     end
   end
