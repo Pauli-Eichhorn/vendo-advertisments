@@ -1,13 +1,17 @@
 <div class='header'>
-  <h1 class="ml-5">All Screens</h1>
-  <%= form_tag listings_path, class: "form-search d-flex col-8", method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a Screen"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
+  <div class="text-center">
+    <h1 class="ml-5">Available Screens</h1>
+  </div>
+  <div class="search-bar">
+    <%= form_tag listings_path, class: "form-search d-flex col-8", method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a Screen"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
 
 <div class="container">
@@ -15,12 +19,14 @@
     <% @listings.each do |listing| %>
         <%= link_to listing_path(listing) do %>
           <div class='card'>
-            <p> <%=  cl_image_tag listing.photo.key, height: 200, width: 300, crop: :fill %></p>
-            <h4><%= listing.name %></h4>
-            <h6> <strong>Description:</strong> <%= listing.description.first(70)%> ...</h6>
-            <h6><strong>Location:</strong> <%= listing.location %></h4>
-            <h6><strong>Price:</strong> <%= listing.price %> €</h4>
-            <h6><strong>Availability:</strong> <%= listing.availability %></h4>
+            <p> <%=  cl_image_tag listing.photo.key%></p>
+            <div class="text-center"><h4><%= listing.name %></h4></div>
+            <div class='card-index-content'>
+              <h6><%= listing.description.first(70)%> ...</h6>
+              <h6><strong>📍</strong> <%= listing.location %></h4>
+              <h6><strong>🏷</strong> <%= listing.price %> €</h4>
+              <h6><strong>Availability:</strong> <%= listing.availability %></h4>
+            </div>
           </div>
         <% end %>
     <% end %>
