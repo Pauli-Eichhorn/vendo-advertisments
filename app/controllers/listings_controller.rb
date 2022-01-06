@@ -1,17 +1,22 @@
 class ListingsController < ApplicationController
   def index
+
     if params[:query].present?
       sql_query = "name ILIKE :query OR description ILIKE :query"
       @listings = Listing.where(sql_query, query: "%#{params[:query]}%")
     else
       @listings = Listing.all
     end
-    # @markers = @listings.geocoded.map do |listing|
-    #   {
-    #     lat: listing.latitude,
-    #     lng: listing.longitude
-    #   }
-    # end
+
+    @markers = @listings.geocoded.map do |listing|
+      {
+        lat: listing.latitude,
+        lng: listing.longitude,
+        price: listing.price,
+        name: listing.name
+      }
+    end
+
   end
 
   def new

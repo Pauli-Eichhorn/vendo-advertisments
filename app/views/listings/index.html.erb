@@ -1,9 +1,12 @@
+<div id="map"
+     style="width: 100%; height: 350px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
 <div class='header'>
-  <div class="text-center">
-    <h1 class="ml-5">Available Screens</h1>
-  </div>
-  <div class="search-bar">
-    <%= form_tag listings_path, class: "form-search d-flex col-8", method: :get do %>
+  <div class="search-bar mx-auto">
+    <%= form_tag listings_path, class: "form-search d-flex col-8 mx-auto", method: :get do %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",

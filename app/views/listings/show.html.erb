@@ -3,18 +3,20 @@
 
   <div class='info-text mx-4'>
    <div class='btn btn-book mr-sm-4 my-3'><%= link_to "Book Chef", new_listing_booking_path(@listing) %></div>
-    <h1><strong><%= @listing.name %></strong></h1>
-    <p><strong>Description: </strong><%= @listing.description %></p>
-    <p><strong>Location: </strong><%= @listing.location %></p>
-    <p><strong>Price: </strong><%= @listing.price %>€</p>
-    <p><strong>Availability: </strong><%= @listing.availability %></p>
+    <div class="text-center">
+      <h1><strong><%= @listing.name %></strong></h1>
+      <p><%= @listing.description %></p>
+    </div>
+    <p><strong>📍Location:</strong><%= @listing.location %></p>
+    <p><strong>🏷 Price:</strong><%= @listing.price %>€</p>
+    <p><strong>🗓 Availability: </strong><%= @listing.availability %></p>
     <h6><strong>Bookings:</strong></h6>
     <ul>
       <% @listing.bookings.each do |booking| %>
         <li><h6> <%= booking.date_booking%></h6></li>
       <% end %>
     </ul>
-    <div class='btn btn-show mr-sm-4'><%= link_to "Back to all listings", listings_path %></div>
+    <div class='btn btn-show mr-sm-4'><%= link_to "Back to all screens", listings_path %></div>
     <% if current_user == @listing.user %>
       <div class='btn btn-edit mr-sm-4'><%= link_to 'Edit', edit_listing_path(@listing) %></div>
       <div class='btn btn-destroy mr-sm-4'><%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %></div>
