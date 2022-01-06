@@ -16,7 +16,7 @@ const initMapbox = () => {
     });
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
-      const popup = new mapboxgl.Popup().setHTML(marker.info_window); // add this
+      const popup = new mapboxgl.Popup().setHTML(`<h6>${marker.name}</h6><p>${marker.price}€/day</p>`); // add this
       new mapboxgl.Marker()
         .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)

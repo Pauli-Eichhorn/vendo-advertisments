@@ -11,7 +11,9 @@ class ListingsController < ApplicationController
     @markers = @listings.geocoded.map do |listing|
       {
         lat: listing.latitude,
-        lng: listing.longitude
+        lng: listing.longitude,
+        price: listing.price,
+        name: listing.name
       }
     end
 
