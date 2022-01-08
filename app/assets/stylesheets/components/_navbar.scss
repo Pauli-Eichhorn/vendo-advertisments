@@ -1,16 +1,22 @@
 .navbar-lewagon {
   background: rgb(255, 255, 255);
   height: 100px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .navbar {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
   z-index: 1000;
+  list-style-type: none;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  border-bottom: 1px solid #315aa0;
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-bottom: 0px;
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -44,8 +50,19 @@
   position: absolute;
   left: calc((100% - 195px) / 2);
   z-index: 100000;
+  flex-grow: 1;
 }
 
 .navbar-btns {
   text-decoration: none;
+  flex-grow: 1;
+}
+.nav-item {
+  list-style-type: none;
+  flex-grow: 1;
+}
+
+.home-button {
+  list-style-type: none;
+  flex-grow: 1;
 }

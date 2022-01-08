@@ -1,1 +1,154 @@
 // Specific CSS for your home-page
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  margin:0;
+  padding:0;
+	-webkit-perspective: 1px;
+	perspective: 1px;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-grow: 1;
+}
+
+header {
+  color: #fff;
+  box-sizing: border-box;
+  min-height: 40vw;
+  padding: 30vw 0 5vw;
+  position: relative;
+  -webkit-transform-style: inherit;
+  transform-style: inherit;
+  width: 100vw;
+}
+
+header, header:before {
+  background: 50% 50% / cover;
+}
+header::before {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  content: "";
+	display: block;
+	background-color: #8a8;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(image_path('screen-1.jpg'));
+  background-size: cover;
+  -webkit-transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+header * {
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-align: center;
+	padding: 0.2em 0;
+}
+
+.head-text{
+  margin-top: -200px;
+  margin-bottom: 200px;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+        animation: fadein 2s;
+}
+
+main {
+  background-color: #0C0C0E;
+  line-height: 1.7;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: rgb(1, 1, 60);
+  border-top: 1px solid #fff;
+}
+
+.home-text-1 {
+  color: #fff;
+  width:600px;
+  flex-grow: 1;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+
+
+.home-text-2 {
+  background-color: #FFFFFF;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 250px;
+}
+
+.question-1-home {
+  display: flex;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  color: #fff;
+  justify-content: center;
+  text-align: center;
+  width: 900px;
+  flex-grow: 1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.question-1-home img {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+// .question-2-home {
+//   display: flex;
+//   position:relative;
+//   left: 200px;
+//   top:2px;
+//   background-color:#fff;
+//   border-radius: 15px;
+//   margin-top: 30px;
+// }
+
+// .question-3-home {
+//   background-color:#fff;
+//   border-radius: 15px;
+//   margin-top: 30px;
+//   text-align: center;
+// }
+
+// .question-3-home img {
+//   width: auto;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+.billboard-1 img {
+  width: 80%;
+  height: 600px
+}
