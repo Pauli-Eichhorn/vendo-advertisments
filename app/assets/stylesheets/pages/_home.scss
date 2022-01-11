@@ -66,11 +66,19 @@ header * {
         animation: fadein 2s;
 }
 
-
+.title-home {
+  position: absolute;
+  top: 200;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index:1000;
+}
 main {
+  top: 850;
   background-color: #0C0C0E;
   width: 100%;
-  position: relative;
+  position: absolute;
   z-index: 2;
   border-top: 1px solid #fff;
   text-align: center;
