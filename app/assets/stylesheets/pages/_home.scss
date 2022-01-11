@@ -1,4 +1,3 @@
-// Specific CSS for your home-page
 html {
   height: 100%;
   overflow: hidden;
@@ -35,6 +34,7 @@ header::before {
   left: 0;
   right: 0;
   top: 0;
+  flex-grow: 1;
   position: absolute;
   content: "";
 	display: block;
@@ -57,8 +57,8 @@ header * {
 }
 
 .head-text{
-  margin-top: -200px;
-  margin-bottom: 200px;
+  flex-grow: 1;
+  padding: auto;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
     -ms-animation: fadein 2s; /* Internet Explorer */
@@ -66,30 +66,22 @@ header * {
         animation: fadein 2s;
 }
 
+
 main {
   background-color: #0C0C0E;
-  line-height: 1.7;
   width: 100%;
   position: relative;
   z-index: 2;
-  text-align: center;
-  color: rgb(1, 1, 60);
   border-top: 1px solid #fff;
+  text-align: center;
 }
 
 .home-text-1 {
   color: #fff;
-  width:600px;
-  flex-grow: 1;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  border-radius: 5px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
     -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 3s; /* Firefox < 16 */
         -ms-animation: fadein 3s; /* Internet Explorer */
@@ -98,26 +90,18 @@ main {
 }
 
 
-.home-text-2 {
-  background-color: #FFFFFF;
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 250px;
-}
-
-.question-1-home {
+.question-container {
   display: flex;
-  border: 1px solid #fff;
-  border-radius: 5px;
+}
+.question-1-home {
+  padding-top: 25px;
+  border-right: 1px solid #fff;
   margin-bottom: 50px;
   color: #fff;
   justify-content: center;
   text-align: center;
-  width: 900px;
+  width: 100px;
   flex-grow: 1;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .question-1-home img {
@@ -125,15 +109,16 @@ main {
   border-bottom-left-radius: 5px;
 }
 
-// .question-2-home {
-//   display: flex;
-//   position:relative;
-//   left: 200px;
-//   top:2px;
-//   background-color:#fff;
-//   border-radius: 15px;
-//   margin-top: 30px;
-// }
+.question-2-home {
+  border-left: 1px solid #fff;
+  padding-top: 25px;
+  margin-bottom: 50px;
+  color: #fff;
+  justify-content: center;
+  text-align: center;
+  width: 100px;
+  flex-grow: 1;
+}
 
 // .question-3-home {
 //   background-color:#fff;
@@ -152,3 +137,18 @@ main {
   width: 80%;
   height: 600px
 }
+
+  // color: #fff;
+  // position: relative;
+  // -webkit-transform-style: inherit;
+  // transform-style: inherit;
+  // background-size: cover;
+  // background-position: center;
+  // height: 70vh;
+  // width: auto;
+  // -webkit-transform-origin: center center 0;
+  // -webkit-transform: translateZ(-1px) scale(2);
+  // transform-origin: center center 0;
+  // transform: translateZ(-1px) scale(2);
+  // z-index: -100;
+  // min-height: 100vh;
