@@ -36,7 +36,6 @@ h1, h2, h3, h4, h5, h6, p  {
 }
 
 a{
-  color: #294982;
   text-decoration: none;
 }
 
@@ -72,4 +71,8 @@ a:hover {
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+li {
+  list-style-type: none;
 }

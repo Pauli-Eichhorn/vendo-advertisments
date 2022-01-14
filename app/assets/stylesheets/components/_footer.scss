@@ -1,31 +1,35 @@
 .footer {
-  position: absolute;
-	bottom: 0;
-  z-index: 1000;
-  list-style-type: none;
   background: lightgray;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 120px;
   padding: 0px 50px;
-  color: #999D9F;
+  color: #999D9F !important;
+  position: relative;
+  bottom: 0;
   width: 100%;
+  z-index: 3;
 }
-.footer-links {
+.footer-socialmedia {
   display: flex;
   align-items: center;
 }
-.footer-links a {
+.footer-socialmedia a {
   color: #999D9F;
   opacity: 0.5;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
-.footer-links a:hover {
+.footer-socialmedia a:hover {
   opacity: 0.7;
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+.footer-links {
+  text-align: left;
+  color: darkgray !important;
 }
