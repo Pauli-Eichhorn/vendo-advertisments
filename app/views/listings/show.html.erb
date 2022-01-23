@@ -1,8 +1,8 @@
 <div class='show-container'>
   <%=cl_image_tag @listing.photo.key%>
 
-  <div class='info-text mx-4'>
-   <div class='btn btn-book mr-sm-4 my-3'><%= link_to "Book Chef", new_listing_booking_path(@listing) %></div>
+  <div class='info-text mx-4'> 
+   <div class='btn btn-book mr-sm-4 my-3'><%= link_to "Book!", new_listing_booking_path(@listing) %></div>
     <div class="text-center">
       <h1><strong><%= @listing.name %></strong></h1>
       <p><%= @listing.description %></p>
