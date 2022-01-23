@@ -1,12 +1,66 @@
+// Basic Navbar code
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgba(0, 0, 0, 1);
+  height: 100px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.navbar {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+  z-index: 1000;
+  list-style-type: none;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-bottom: 0px;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 120px;
+  height: 120px;
+}
+
+.navbar-brand {
+  margin-left: -20px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  margin-right: -20px;
+  padding-left: -20px;
+  padding-top: -20px;
+  padding-bottom: -20px;
+  padding-right: -20px;
+}
+
+
+.nav-link {
+  color: #fff;
+
+}
+
+.nav-link:hover {
+  color: #86ddff;
+
+}
+
+#navbarSupportedContent {
+
+}
+
+.nav-item {
+
+}
+
+.navbar-toggler-icon {
+  color: #fff;
+}
+
+.drop-down img {
+  width:38px;
+  height: 38px;
 }

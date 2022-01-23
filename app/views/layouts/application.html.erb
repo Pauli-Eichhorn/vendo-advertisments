@@ -1,5 +1,6 @@
 <%= render 'shared/navbar' %>
 
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,9 +13,11 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= stylesheet_pack_tag 'application' %>
   </head>
 
   <body>
     <%= yield %>
+      <div class="footer-container"><%= render "shared/footer" %></div>
   </body>
 </html>
