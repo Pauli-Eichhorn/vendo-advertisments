@@ -1,0 +1,73 @@
+.login-button {
+  padding: 8px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  background-color: #238ddf;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.login-button:hover {
+  color: #fff;
+  background-color: #00bbff;
+
+}
+
+.signup-box {
+  margin-top: 30px;
+}
+
+.login-text {
+  padding-top: 20px;
+}
+
+// sign up
+
+.signup-box {
+  border-radius: 15px;
+  background-color: rgb(15, 15, 15);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-inputs {
+ margin-left: 50px;
+ margin-right: 50px;
+}
+
+#btn-signup {
+  padding: 8px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  background-color: #238ddf;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.signup-text {
+  margin-top: 15px;
+}
+
+.form-actions-btn {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+// new password
+.text-new-password {
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  background-color: #238ddf;
+  display: inline-block;
+}
+
+.text-new-password:hover {
+  color: rgb(208, 202, 202);
+}

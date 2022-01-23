@@ -1,71 +1,45 @@
 <header>
   <div class="head-text">
-    <h1>Affordable</h1>
-    <h1>Advertisement</h1>
-    <h1>Anywhere</h1>
-    <div class="mt-2">
-      <h4>A Digital Platform for Advertising</h4>
+    <div class="row">
+      <div class="Title-home mx-auto">
+        <h1>Affordable</h1>
+        <h1>Advertisement</h1>
+        <h1>Anywhere</h1>
+        <div class="mt-2">
+          <h4>A Digital Platform for Advertising</h4>
+        </div>
+        <% if user_signed_in? %>
+          <div class="center">
+            <button class="fancy">
+              <a href="/listings" target="_self" class="">See Screens</a>
+            </button>
+          </div>
+        <% else %>
+          <div class="center">
+            <button class="fancy">
+              <a href="/users/sign_in" target="_self" class="">Get Started</a>
+            </button>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </header>
 
 <main>
   <div class="home-text-1">
-      <h1>About</h1>
-	  <h5>Vendo provide digital signage advertising displays in storefront windows for you to advertise inexpensively, quickly and flexibly. We create your new advertising campaign through our consultation service.</h5>
-  </div>
-
-
-  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="billboard-1">
-          <%= image_tag "billboard-1" %>
-        </div>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="billboard-1">
-          <%= image_tag "billboard-2" %>
-        </div>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="billboard-1">
-          <%= image_tag "billboard-3"%>
-        </div>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </div>
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <h1>About Us</h1>
+        <h5>Vendo provide digital signage advertising displays in storefront windows for you to advertise inexpensively, quickly and flexibly. We create your new advertising campaign through our consultation service.</h5>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
 
+  <div class="question-container">
+
     <div class="question-1-home">
-      <div>
-        <%= image_tag "home-text-1.jpg" %>
-      </div>
-      <div>
+      <div class="col-md-6 mx-auto" >
         <h4> You need to Advertise?</h4>
         <h5> How about Storefront Window Display Advertising? </h5>
         <p> Digital storefront window advertising is the way forward to get your business or product caught sight of in the urban space. Not only is digital advertising more efficient and effective, but also more sustainable. </p>
@@ -73,20 +47,19 @@
     </div>
 
     <div class="question-2-home">
-      <div>
-        <%= image_tag "home-text-2.jpg" %>
-      </div>
-
-      <div>
-      <h3> You are a Store Owner?</h3>
-      <h4> Become a display partner </h4>
-      <h5> Earn monthly compensations. Vendo will not only provide the displays, but we will take care of the setup and installation. Our support is always available. We only ask for a fraction of your shop window space. Earn up to 20%of the displays revenue. At the end of the month, you receive your compensation. This provides you with a reliable and solid supplementary income.</h5>
+      <div class="col-md-6 mx-auto">
+        <h4> You are a Store Owner?</h4>
+        <h5> Become a display partner </h5>
+        <p> Earn monthly compensations. Vendo will not only provide the displays, but we will take care of the setup and installation. Our support is always available. We only ask for a fraction of your shop window space. Earn up to 20%of the displays revenue. At the end of the month, you receive your compensation. This provides you with a reliable and solid supplementary income.</p>
       </div>
     </div>
 
-    <div class="question-3-home" >
-      <h3>Need an Advertising Campaign?</h3>
-      <h5>No Problem, Vendo's team will happily help you create an amazing advertising campaign!</h5>
-      <%= image_tag "home-text-3.jpg"%>
+    <div class="question-2-home">
+      <div class="col-md-6 mx-auto">
+        <h4> Need an Advertising Campaign?</h4>
+        <h6> No Problem, Vendo's team will happily help you create a amazing advertising campaign </h6>
+      </div>
     </div>
+
+  </div>
 </main>
