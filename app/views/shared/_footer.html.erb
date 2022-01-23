@@ -1,25 +1,33 @@
 <main>
   <div class="footer">
-    <div class="footer-links">
-      <ul>
-        <li>
-          <%= link_to "About Us", "/listings", class: "foot-link" %>
-        </li>
-        <li>
-          <%= link_to "Work", "/listings", class: "foot-link" %>
-        </li>
-        <li>
-          <%= link_to "FAQ", "/listings", class: "foot-link" %>
-        </li>
-        <li>
-          <%= link_to "Contact us", "/listings", class: "foot-link" %>
-        </li>
-      </ul>
+    <div class="footer-box-1">
+      <div class="footer-info">
+      <h6><%= image_tag "address.png", class: "address-logo" %> Bewdley DY12 1LN </h6>
+      <h6><%= image_tag "email.png", class: "email-logo" %>  vendoadvertisements@gmail.com </h6>
+      <h6><%= image_tag "telephone.png", class: "phone-logo" %>  07904797117 </h6>
+      </div>
+
+      <div class="footer-links">
+        <ul>
+          <li>
+            <%= link_to "About Us", "/about-us", class: "foot-link" %>
+          </li>
+          <li>
+            <%= link_to "Work", "/work", class: "foot-link" %>
+          </li>
+          <li>
+            <%= link_to "FAQ", "/faq", class: "foot-link" %>
+          </li>
+          <li>
+            <%= link_to "Contact us", "/contact", class: "foot-link" %>
+          </li>
+        </ul>
+      </div>
     </div>
+
     <div class="footer-socialmedia">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/vendoadvertisements/" target="_blank"> <i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/vendo-advertisements-limited" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </div>
 </main>

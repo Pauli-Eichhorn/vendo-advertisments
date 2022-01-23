@@ -2,7 +2,7 @@
   <%=cl_image_tag @listing.photo.key%>
 
   <div class='info-text mx-4'>
-   <div class='btn btn-book mr-sm-4 my-3'><%= link_to "Book Chef", new_listing_booking_path(@listing) %></div>
+
     <div class="text-center">
       <h1><strong><%= @listing.name %></strong></h1>
       <p><%= @listing.description %></p>
@@ -10,6 +10,8 @@
     <p><strong>📍Location:</strong><%= @listing.location %></p>
     <p><strong>🏷 Price:</strong><%= @listing.price %>€</p>
     <p><strong>🗓 Availability: </strong><%= @listing.availability %></p>
+    <div class='btn btn-book mr-sm-4 my-3'><%= link_to "Book this screenvendoadvertisements", new_listing_booking_path(@listing) %></div>
+
     <h6><strong>Bookings:</strong></h6>
     <ul>
       <% @listing.bookings.each do |booking| %>
