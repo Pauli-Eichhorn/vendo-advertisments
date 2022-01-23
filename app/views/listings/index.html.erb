@@ -1,45 +1,47 @@
-<div class="container-index-listing">
+<main></main>
+  <div class="container-index-listing">
 
-  <div>
-    <div class='header'>
-      <div class="search-bar mx-auto">
-        <%= form_tag listings_path, class: "form-search d-flex col-8 mx-auto", method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find a Screen"
-          %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class='cards-home'>
-        <div class="row">
-          <% @listings.each do |listing| %>
-            <div class="col">
-              <%= link_to listing_path(listing) do %>
-                <div class='card'>
-                  <p> <%=  cl_image_tag listing.photo.key, height: 150, width: 348, crop: :fill%></p>
-                  <div class="text-center"><h4><%= listing.name %></h4></div>
-                  <div class='card-index-content'>
-                    <h6><%= listing.description.first(70)%> ...</h6>
-                    <h6><strong>📍</strong> <%= listing.location %></h4>
-                    <h6><strong>🏷</strong> <%= listing.price %> €</h4>
-                    <h6><strong>Availability:</strong> <%= listing.availability %></h4>
-                  </div>
-                </div>
-              <% end %>
-            </div>
+    <div>
+      <div class='header'>
+        <div class="search-bar mx-auto">
+          <%= form_tag listings_path, class: "form-search d-flex col-8 mx-auto", method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find a Screen"
+            %>
+            <%= submit_tag "Search", class: "btn btn-primary" %>
           <% end %>
         </div>
       </div>
+
+      <div class="container">
+        <div class='cards-home'>
+          <div class="row">
+            <% @listings.each do |listing| %>
+              <div class="col">
+                <%= link_to listing_path(listing) do %>
+                  <div class='card'>
+                    <p> <%=  cl_image_tag listing.photo.key, height: 150, width: 348, crop: :fill%></p>
+                    <div class="text-center"><h4><%= listing.name %></h4></div>
+                    <div class='card-index-content'>
+                      <h6><%= listing.description.first(70)%> ...</h6>
+                      <h6><strong>📍</strong> <%= listing.location %></h4>
+                      <h6><strong>🏷</strong> <%= listing.price %> €</h4>
+                      <h6><strong>Availability:</strong> <%= listing.availability %></h4>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="map"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
-
-  <div id="map"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-</div>
+</main>
