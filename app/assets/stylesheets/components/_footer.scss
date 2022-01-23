@@ -1,9 +1,11 @@
+
 .footer {
-  background: lightgray;
+  background: rgb(0, 0, 0);
   display: flex;
   align-items: center;
+  text-align: left;
   justify-content: space-between;
-  height: 120px;
+  height: 200px;
   padding: 0px 50px;
   color: #999D9F !important;
   position: relative;
@@ -16,20 +18,42 @@
   align-items: center;
 }
 .footer-socialmedia a {
-  color: #999D9F;
-  opacity: 0.5;
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 .footer-socialmedia a:hover {
-  opacity: 0.7;
-}
-.footer .fa-heart {
-  color: #D23333;
+  opacity: 1;
 }
 
-.footer-links {
+.footer-box-1 {
+  display: flex;
+
+}
+
+
+.foot-link {
   text-align: left;
-  color: darkgray !important;
+  color: #999D9F ;
+}
+
+.foot-link:hover {
+  color: rgb(255, 108, 108);
+}
+
+.phone-logo {
+  width: 25px;
+  height: 25px;
+}
+
+.email-logo {
+  width: 25px;
+  height: 25px;
+}
+
+.address-logo {
+  width: 25px;
+  height: 25px;
 }
