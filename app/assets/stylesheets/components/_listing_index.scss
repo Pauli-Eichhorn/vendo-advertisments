@@ -1,107 +1,196 @@
-.container-index-listing {
-  display: flex;
+.listings-index-body {
+    background-color: #e6e6e6;
+  }
+
+.right-container-index {
+  margin-top: 100px;
 }
 
-.cards-home {
-  // display: grid;
-  // grid-template-columns: 1fr 1fr 1fr;
-  // grid-gap: 35px;
-  // justify-content: center;
-  // align-items: center;
-  // flex-grow: 1;
-  // margin-top:35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+@media (max-width: 1000px) {
+  .cards-home {
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .card-index {
+    width: 350px;
+    height: 350px;
+    color: #0C0C0E;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    background: rgb(253, 253, 253);
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-index :hover {
+    text-decoration: none;
+  }
+
+  .card-index img {
+    height: 150px;
+    width: 348px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+  }
+
+  .card-index-content {
+    margin-left: 25px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
 }
 
-.card {
-  // border-radius: 15px;
-  // background-color: rgb(247, 247, 247);
-  // color: black;
-  text-decoration: none;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  align-items: center;
-  background: #fff;
-  width: 350px;
-  height: 350px;
-  border-radius: 15px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  padding-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
-}
+@media (min-width:1000px){
+  .card-index {
+    display: flex;
+    width: 90%;
+    height: 240;
+    color: #0C0C0E;
+    text-decoration: none;
+    background: rgb(230, 230, 230);
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #000;
+  }
 
-.card :hover {
-  text-decoration: none;
-}
+  .card :hover {
+    text-decoration: none;
+  }
 
-.card img {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  .card-index img {
+    height: 200;
+    width: 300;
+    border-radius: 15px;
+    margin-top:20;
+  }
+  .card-index-content {
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
-
-.card-index-content {
-  margin-left: 25px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
 .search-bar {
   margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+@media (max-width:844px){
+  .listings-index-main {
+      top: 0;
+      bottom: 0;
+      background-color: rgb(230, 230, 230);
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid #fff;
+      text-align: center;
+  }
+
+    #map {
+    height: 350px;
+    width:100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  }
 }
 
 
-#map {
-  height: 100vh;
-  width:50%;
-  position: sticky;
-  top: 0;
-  display: block;
-  z-index: 4;
-  top: 0;
+
+@media (min-width: 844px) {
+  .container-index-listing {
+    display: flex;
+    margin-top: -100px;
+  }
+  .listings-index-main {
+      top: 0px;
+      margin-bottom: -250px;
+      background-color: rgb(230, 230, 230);
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid #fff;
+      text-align: center;
+  }
+  #map {
+    height: 100vh;
+    width:65%;
+    position: sticky;
+    top: 0px;
+    display: block;
+    z-index: 4;
+    border-right: 2px solid #fff;
+  }
 }
 
-// <div id="map"
-//      style="width: 100%; height: 350px; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;"
-//      data-markers="<%= @markers.to_json %>"
-//      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-// </div>
 
-// <div class='header'>
-//   <div class="search-bar mx-auto">
-//     <%= form_tag listings_path, class: "form-search d-flex col-8 mx-auto", method: :get do %>
-//       <%= text_field_tag :query,
-//         params[:query],
-//         class: "form-control",
-//         placeholder: "Find a Screen"
-//       %>
-//       <%= submit_tag "Search", class: "btn btn-primary" %>
-//     <% end %>
-//   </div>
-// </div>
+@media (width: 1024px) {
+  .container-index-listing {
+    display: flex;
+  }
+  .listings-index-main {
+      top: 0;
+      margin-bottom: -50px;
+      background-color: #0C0C0E;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid #fff;
+      text-align: center;
+  }
+  #map {
+    height: 100vh;
+    width:65%;
+    position: sticky;
+    top: 0;
+    display: block;
+    z-index: 4;
+    top: 0;
+    border-right: 2px solid #fff;
+  }
+}
 
-// <div class="container">
-//   <div class='cards-home'>
-//     <div class="row">
-//       <% @listings.each do |listing| %>
-//         <div class="col">
-//           <%= link_to listing_path(listing) do %>
-//             <div class='card'>
-//               <p> <%=  cl_image_tag listing.photo.key, height: 150, width: 348, crop: :fill%></p>
-//               <div class="text-center"><h4><%= listing.name %></h4></div>
-//               <div class='card-index-content'>
-//                 <h6><%= listing.description.first(70)%> ...</h6>
-//                 <h6><strong>📍</strong> <%= listing.location %></h4>
-//                 <h6><strong>🏷</strong> <%= listing.price %> €</h4>
-//                 <h6><strong>Availability:</strong> <%= listing.availability %></h4>
-//               </div>
-//             </div>
-//           <% end %>
-//         </div>
-//       <% end %>
-//     </div>
-//   </div>
-// </div>
+// @media (min-width:550px){
+
+//   .listings-index-main {
+//       top: 0;
+//       margin-bottom: -250px;
+//       background-color: #0C0C0E;
+//       width: 100%;
+//       position: relative;
+//       z-index: 2;
+//       border-top: 1px solid #fff;
+//       text-align: center;
+//   }
+// }
+
+// @media (max-height:600px){
+//   .listings-index-main {
+//     top: 0;
+//     bottom: 0;
+//     background-color: #0C0C0E;
+//     width: 100%;
+//     position: relative;
+//     z-index: 2;
+//     border-top: 1px solid #fff;
+//     text-align: center;
+//   }
+// }
+
+// @media (height:568px){
+//   .listings-index-main {
+//     top: 0;
+//     bottom: 0;
+//     background-color: #0C0C0E;
+//     width: 100%;
+//     position: relative;
+//     z-index: 2;
+//     border-top: 1px solid #fff;
+//     text-align: center;
+//   }
+// }
