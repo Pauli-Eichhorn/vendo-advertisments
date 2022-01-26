@@ -73,7 +73,7 @@ header * {
   left: 0;
   right: 0;
   text-align: center;
-  z-index:5;
+  z-index: 1;
 }
 
 
@@ -230,6 +230,7 @@ button.fancy {
   transition: all .3s ease-in-out;
   user-select: none;
   width: 16.8125rem;
+  z-index: 1;
 
 &::before {
     content: " ";
@@ -245,6 +246,7 @@ button.fancy {
     transform-origin: center;
     -webkit-transition: background 0.3s linear, width 0.3s linear;
     transition: background 0.3s linear, width 0.3s linear;
+    z-index: 1;
 }
   a {
     font-size: 1.125em;
@@ -257,6 +259,7 @@ button.fancy {
     text-transform: uppercase;
     text-decoration: none;
     color: white;
+    z-index: 1;
 }
 
     &:hover {
