@@ -13,17 +13,34 @@
     <ul class="d-flex">
         <% if user_signed_in? %>
 
-          <li>
-            <h5><><%= link_to "SCREENS", "/listings", class: "nav-link" %></></h5>
-          </li>
+          <% if current_user.owner == true %>
+            <li>
+              <h5><><%= link_to "ADD SCREEN", "/listings/new", class: "nav-link" %></> </h5>
+            </li>
+            <li>
+              <h5><><%= link_to "SCREENS", "/listings", class: "nav-link" %></></h5>
+            </li>
 
-          <li>
-            <h5><><%= link_to "GET IN TOUCH", "mailto:vendoadvertisements@gmail.com?subject=Getting in Touch", class: "nav-link" %></></h5>
-          </li>
+            <li>
+              <h5><><%= link_to "GET IN TOUCH", "mailto:vendoadvertisements@gmail.com?subject=Getting in Touch", class: "nav-link" %></></h5>
+            </li>
 
-          <li>
-            <h5><><%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "nav-link"%></></h5>
-          </li>
+            <li>
+              <h5><><%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "nav-link"%></></h5>
+            </li>
+          <% else %>
+            <li>
+              <h5><><%= link_to "SCREENS", "/listings", class: "nav-link" %></></h5>
+            </li>
+
+            <li>
+              <h5><><%= link_to "GET IN TOUCH", "mailto:vendoadvertisements@gmail.com?subject=Getting in Touch", class: "nav-link" %></></h5>
+            </li>
+
+            <li>
+              <h5><><%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "nav-link"%></></h5>
+            </li>
+          <% end %>
 
         <% else %>
           <li>
