@@ -14,12 +14,47 @@
   list-style-type: none;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-  padding-right: 80px;
-  padding-left: 80px;
-  padding-bottom: 0px;
+@media (min-width:994px){
+  .navbar-lewagon .navbar-collapse {
+    flex-grow: 0;
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+}
 
+@media ( min-width:846px) and ( max-width:993px){
+  .navbar-lewagon .navbar-collapse {
+    flex-grow: 0;
+  }
+  .h5-navbar {
+    font-size: 16.5px;
+  }
+}
+
+@media ( min-width:480px) and ( max-width:845px){
+  .navbar-lewagon .navbar-collapse {
+    flex-grow: 0;
+  }
+  .h5-navbar {
+    font-size: 14px;
+  }
+}
+
+@media ( min-width:385px) and ( max-width:480px) {
+  .navbar-lewagon .navbar-collapse {
+    flex-grow: 0;
+  }
+  .h5-navbar {
+    font-size: 10;
+  }
+}
+@media ( max-width:385px) {
+  .navbar-lewagon .navbar-collapse {
+    flex-grow: 0;
+  }
+  .h5-navbar {
+    font-size: 8;
+  }
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -42,17 +77,12 @@
 .nav-link {
   color: #fff;
   text-align: center;
+  margin-top: 24px;
 }
 
 .nav-link:hover {
   color: #86ddff;
-
 }
-
-#navbarSupportedContent {
-
-}
-
 
 .navbar-toggler-icon {
   color: #fff;
@@ -66,4 +96,18 @@
 .navbar-btns {
   justify-content: center;
   align-items: center;
+}
+
+#navbarSupportedContent.navbar-collapse.collapse.show {
+  background-color: #000;
+  padding-right: 200px;
+  margin-left: -20px;
+  padding-left: 20px;
+}
+
+@media ( max-width:575px) {
+  #navbarSupportedContent.navbar-collapse.collapse.show {
+    border-bottom: 1px solid #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
 }
