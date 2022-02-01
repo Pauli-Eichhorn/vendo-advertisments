@@ -1,0 +1,14 @@
+<body class="body-new-listings">
+  <div class=" new-listings row justify-content-center my-3">
+      <div class="new-listing-container">
+        <%= simple_form_for(@listing) do |f| %>
+          <%= f.input :name, :input_html => { :class => 'booking-input' } %>
+          <%= f.input :description, :input_html => { :class => 'booking-input' } %>
+          <%= f.input :price, :input_html => { :class => 'booking-input' } %>
+          <%= f.input :location, :input_html => { :class => 'booking-input' } %>
+          <%= f.input :photo, as: :file, label: false, wrapper_html: { class: "text-center" }, input_html: { class: "d-inline" } %>
+          <%= f.submit "Submit", class: "btn btn-nav w-100 mr-sm-4" %>
+        <% end %>
+      </div>
+  </div>
+</body>
