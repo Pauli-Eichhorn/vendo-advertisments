@@ -1,1 +1,17 @@
 <h1>Here you can create a new booking</h1>
+<div class="container">
+  <div class="row justify-content-center align-items-center mt-3 pt-5">
+    <div class="col">
+      <div class="booking-card p-5">
+        <h1>Create a new book!</h1>
+          <%= simple_form_for [@listing, @booking] do |f| %>
+            <%= f.input :start_date %>
+            <%= f.input :end_date %>
+            <div class="form-actions">
+              <%= f.button :submit, "Create booking", class:"btn btn-primary w-100 btn-bartender py-3" %>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
