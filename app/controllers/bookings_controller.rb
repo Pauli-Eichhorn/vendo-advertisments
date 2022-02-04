@@ -1,8 +1,6 @@
 class BookingsController < ApplicationController
-
   def index
     # @bookings = Booking.all
-    @review = Review.new
     @host = current_user.listings.any?
     @bookings = current_user.bookings
     if @host
