@@ -1,1 +1,64 @@
 <h1>This is the index of your bookings</h1>
+Booking/index<div class="headers">
+  <h1>My <strong>bookings</strong></h1>
+</div>
+<div class="container mt-5 justify-content-center">
+  <div class="booking-card">
+    <div class="cards">
+      <% @bookings.each do |booking| %>
+        <div class="card">
+            <% if booking.bartender.photo.attached? %>
+                    <%= cl_image_tag booking.bartender.photo.key, class:"card-img-top"  %>
+                  <% else %>
+                    <%= image_tag "bar_image.jpg" , :alt => "Close picture of bottles", class:"card-img-top"%>
+                  <% end %>
+          <div class="card-body">
+            <h5 class="card-title"><%= booking.bartender.user.first_name %></p></h5>
+            <p class="card-text">Starts on <%= booking.start_date %></p>
+            <p class="card-text">Until <%= booking.end_date %></p>
+            <% if booking.status == "accepted" %>
+            <span class="badge badge-success"><%= booking.status %></span>
+            <% else %>
+            <span class="badge badge-secondary"><%= booking.status %></span>
+            <% end %>
+            <% if booking.status == "accepted" %>
+              <%= simple_form_for([ booking, @review ]) do |f| %>
+                <p> Leave a review :</p>
+                <%= f.input :content, as: :text, label: false %>
+                <%= f.submit "Send review", class:"btn btn-bartender btn-dark-moon w-100" %>
+              <% end %>
+            <% end %>
+      </div>
+        </div>
+      <% end %>
+    </div>
+</div>
+  <div class="headers">
+    <h1 class=mt-4>My <strong>booking</strong> requests</h1>
+  </div>
+<div class="container">
+  <div class="booking-card">
+    <div class="cards">
+      <% if @my_bookings %>
+      <% @my_bookings.each do |request| %>
+        <div class="card" id="booking-<%= request.id %>">
+          <%= image_tag "bar_image.jpg", :alt => "Bartender", class:"card-img-top" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= request.bartender.user.first_name %></p></h5>
+            <p class="card-text">Start: <%= request.start_date %></p>
+            <p class="card-text">Until: <%= request.end_date %></p>
+            <p class="card-text">Booked by: <%= request.user.first_name + " " + request.user.last_name %></p>
+            <p class="card-text">Status: <%= request.status %></p>
+            <%= link_to "Accept", accept_path(booking_id: request.id), method: :patch, class:"btn btn-success", remote: true%>
+            <%= link_to "Reject", reject_path(booking_id: request.id), method: :patch, class:"btn btn-info"%>
+          </div>
+        </div>
+        <% end %>
+      <% else %>
+      No bookings yet
+      <% end %>
+    </div>
+  </div>
+  </div>
+</div>
+  <%= link_to "Back to all Bartenders", bartenders_path, class: "btn btn-primary w-20 btn-bartender py-" %>

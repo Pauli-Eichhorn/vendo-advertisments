@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
 
   def index
     # @bookings = Booking.all
-    # @review = Review.new
+    @review = Review.new
     @host = current_user.listings.any?
     @bookings = current_user.bookings
     if @host
@@ -11,21 +11,40 @@ class BookingsController < ApplicationController
     end
   end
 
+  def show
+    @booking = Booking.find(params[:id])
+    @review = Review.new
+  end
+
   def new
-    @bookings = Booking.new
-    @listings = Listing.find(params[:listing_id])
+    @booking = Booking.new
+    @listing = Listing.find(params[:listing_id])
   end
 
   def create
     @booking = Booking.new(booking_params)
     @listing = Listing.find(params[:listing_id])
     @booking.user = current_user
-    @booking.listing= @listing
+    @booking.listing = @listing
     if @booking.save
-      redirect_to listing_bookings_path
+      redirect_to bookings_path
     else
       render :new
     end
+  end
+
+  def accept
+    @booking = Booking.find(params[:booking_id])
+    @booking.status = "accepted"
+    @booking.save
+    redirect_to bookings_path(anchor: "booking-#{@booking.id}")
+  end
+
+  def reject
+    @booking = Booking.find(params[:booking_id])
+    @booking.status = "rejected"
+    @booking.save
+    redirect_to bookings_path(anchor: "booking-#{@booking.id}")
   end
 
   private
@@ -33,5 +52,4 @@ class BookingsController < ApplicationController
   def booking_params
   params.require(:booking).permit(:start_date, :end_date)
   end
-
 end

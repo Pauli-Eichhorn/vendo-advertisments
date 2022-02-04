@@ -10,14 +10,14 @@
     <p><strong>📍Location:</strong><%= @listing.location %></p>
     <p><strong>🏷 Price:</strong><%= @listing.price %>€</p>
     <p><strong>🗓 Availability: </strong><%= @listing.availability %></p>
-    <div class='btn btn-book mr-sm-4 my-3'><%= link_to "Book this screenvendoadvertisements", new_listing_booking_path(@listing) %></div>
 
     <h6><strong>Bookings:</strong></h6>
     <ul>
       <% @listing.bookings.each do |booking| %>
-        <li><h6> <%= booking.date_booking%></h6></li>
+        <li><h6> <%= booking.start_date %> - <%= booking.end_date %></h6></li>
       <% end %>
     </ul>
+    <div class='btn btn-book mr-sm-4 my-3'><%= link_to "Book this screen", new_listing_booking_path(@listing) %></div>
     <div class='btn btn-show mr-sm-4'><%= link_to "Back to all screens", listings_path %></div>
     <% if current_user == @listing.user %>
       <div class='btn btn-edit mr-sm-4'><%= link_to 'Edit', edit_listing_path(@listing) %></div>
