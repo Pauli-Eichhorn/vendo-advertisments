@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2022_02_04_151851) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -51,10 +50,7 @@ ActiveRecord::Schema.define(version: 2022_02_04_151851) do
     t.datetime "updated_at", precision: 6, null: false
     t.date "start_date"
     t.date "end_date"
-    
-    t.string "status"
-    t.string "string"
-    
+    t.string "status", default: "pending"
     t.index ["listing_id"], name: "index_bookings_on_listing_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
