@@ -1,9 +1,9 @@
-<h1>Here you can create a new booking</h1>
+
 <div class="container">
-  <div class="row justify-content-center align-items-center mt-3 pt-5">
+  <div class="row justify-content-center align-items-center">
     <div class="col">
-      <div class="booking-card p-5">
-        <h1>Create a new book!</h1>
+      <div class="booking-card p-5 mt-5">
+        <h1>Create a new booking!</h1>
           <%= simple_form_for [@listing, @booking] do |f| %>
             <%= f.input :start_date %>
             <%= f.input :end_date %>
