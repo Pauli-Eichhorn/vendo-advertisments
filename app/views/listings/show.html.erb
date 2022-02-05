@@ -1,27 +1,55 @@
 <div class='show-container'>
-  <%=cl_image_tag @listing.photo.key%>
-
-  <div class='info-text mx-4'>
+  <%=cl_image_tag @listing.photo.key %>
+  <div class='info-text mx-4 p-2'>
 
     <div class="text-center">
       <h1><strong><%= @listing.name %></strong></h1>
       <p><%= @listing.description %></p>
     </div>
-    <p><strong>📍Location:</strong><%= @listing.location %></p>
-    <p><strong>🏷 Price:</strong><%= @listing.price %>€</p>
-    <p><strong>🗓 Availability: </strong><%= @listing.availability %></p>
+    <p><i class="fas fa-thumbtack"></i><strong> Location :</strong><%= @listing.location %></p>
+    <p><i class="fas fa-tags"></i><strong> Price:</strong><%= @listing.price %>€</p>
+    <p><i class="fas fa-calendar-alt"></i><strong> Availability: </strong><%= @listing.availability %></p>
 
-    <h6><strong>Bookings:</strong></h6>
+    <%# <h6><strong>Bookings:</strong></h6> %>
     <ul>
       <% @listing.bookings.each do |booking| %>
         <li><h6> <%= booking.start_date %> - <%= booking.end_date %></h6></li>
       <% end %>
     </ul>
-    <div class='btn btn-book mr-sm-4 my-3'><%= link_to "Book this screen", new_listing_booking_path(@listing) %></div>
-    <div class='btn btn-show mr-sm-4'><%= link_to "Back to all screens", listings_path %></div>
+    <%# <button class="button-28" role="button">Button 28</button> %>
+      <a class='button-28 m-1' role='button' href="#carousel-anchor">See more</a>
+    <div class='button-28 m-1' role='button'><%= link_to "Book this screen", new_listing_booking_path(@listing) %></div>
+    <div class='btn btn-edit mr-sm-4'><%= link_to "Back", listings_path %></div>
     <% if current_user == @listing.user %>
       <div class='btn btn-edit mr-sm-4'><%= link_to 'Edit', edit_listing_path(@listing) %></div>
       <div class='btn btn-destroy mr-sm-4'><%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %></div>
     <% end %>
+
+  </div>
+
+</div>
+
+<hr style="width:50%", size="3", color=white>
+
+    <a id="carousel-anchor">Here you go</a>
+<div class='carousel'>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%=cl_image_tag @listing.photo.key %>
+      </div>
+      <div class="carousel-item">
+        <%=cl_image_tag @listing.photo.key %>
+      </div>
+      <div class="carousel-item">
+        <%=cl_image_tag @listing.photo.key %>
+      </div>
+    </div>
+
   </div>
 </div>
