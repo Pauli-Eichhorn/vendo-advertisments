@@ -53,12 +53,12 @@
     display: flex;
     width: 90%;
     height: 240;
-    color: #0C0C0E;
+    color: white;
     text-decoration: none;
-    background: rgb(230, 230, 230);
+    background-color: #0e0e0f;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
   }
 
   .card :hover {
@@ -115,7 +115,7 @@
   .listings-index-main {
       top: 0px;
       margin-bottom: -250px;
-      background-color: rgb(230, 230, 230);
+      background-color: #0e0e0f;
       width: 100%;
       position: relative;
       z-index: 2;
