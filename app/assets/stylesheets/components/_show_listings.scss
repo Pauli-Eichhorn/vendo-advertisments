@@ -4,22 +4,20 @@
   // background-color: white;
   overflow: hidden;
   height: 600px;
-  background-color: #395B64;
-  box-shadow: 0 0 15px white;
   display: flex;
   align-items: center;
   margin: 80px;
-  border-radius: 7px;
 }
 .show-container img {
   height: auto;
   height: 100%;
-  width: 65%;
+  width: 40%;
   object-fit: cover;
+  border-radius: 7px;
+
 }
 
 .info-text{
-  background-color: #395B64;
   color: white;
 }
 
