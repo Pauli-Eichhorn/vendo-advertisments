@@ -36,7 +36,7 @@
 <% if current_user.owner == true %>
 
   <div class="headers">
-    <h1 class="header-index-booking"><strong>booking requests</strong></h1>
+    <h1 class="header-index-booking"><strong>Booking Requests</strong></h1>
   </div>
 
   <div class="container">
@@ -53,12 +53,17 @@
                 <p class="card-booking-text">Booked by: <%= request.user.first_name + " " + request.user.last_name %></p>
                 <p class="card-booking-text">Clients Adress: <%= request.user.address%></p>
                 <p class="card-booking-text">Status: <%= request.status %></p>
+                <%= link_to "Accept", accept_path(booking_id: request.id), method: :patch, class:"btn btn-success" %>
+                <%= link_to "Reject", reject_path(booking_id: request.id), method: :patch, class:"btn btn-info"%>
               </div>
             </div>
           <% end %>
+          <% else %>
+      No bookings yet
         <% end %>
       </div>
     </div>
   </div>
 
+<%# <%= link_to "Back to all Bartenders", listings_path, class: "btn btn-primary w-20" %> %>
 <% end %>
