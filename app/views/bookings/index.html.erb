@@ -53,8 +53,8 @@
                 <p class="card-booking-text">Booked by: <%= request.user.first_name + " " + request.user.last_name %></p>
                 <p class="card-booking-text">Clients Adress: <%= request.user.address%></p>
                 <p class="card-booking-text">Status: <%= request.status %></p>
-                <%= link_to "Accept", accept_path(booking_id: request.id), method: :patch, class:"btn btn-success" %>
-                <%= link_to "Reject", reject_path(booking_id: request.id), method: :patch, class:"btn btn-info"%>
+                <%= link_to "Accept", accept_path(booking_id: request.id), method: :patch, class:"btn btn-success", data: {confirm: "Are you sure you want to accept?"} %>
+                <%= link_to "Reject", reject_path(booking_id: request.id), method: :patch, class:"btn btn-info", data: {confirm: "Are you sure you want to reject?"}%>
               </div>
             </div>
           <% end %>
