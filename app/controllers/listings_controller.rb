@@ -12,8 +12,7 @@ class ListingsController < ApplicationController
       {
         lat: listing.latitude,
         lng: listing.longitude,
-        price: listing.price,
-        name: listing.name
+        info_window: render_to_string(partial: "info_window", locals: { listing: listing })
       }
     end
 
