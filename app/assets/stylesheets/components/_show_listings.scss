@@ -18,7 +18,7 @@
 .button-28 {
   appearance: none;
   background-color: transparent;
-  border: 2px solid #1A1A1A;
+  border: 2px solid #1e1e1e;
   border-radius: 15px;
   box-sizing: border-box;
   color: rgb(195, 195, 195);
@@ -49,7 +49,7 @@
 
 .button-28:hover {
   color: #fff;
-  background-color: #1A1A1A;
+  background-color: #1e1e1e;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
@@ -64,7 +64,7 @@
 .button-28-small {
   appearance: none;
   background-color: transparent;
-  border: 2px solid #1A1A1A;
+  border: 2px solid #1e1e1e;
   border-radius: 15px;
   box-sizing: border-box;
   color: #3B3B3B;
@@ -95,7 +95,7 @@
 
 .button-28-small:hover {
   color: #fff;
-  background-color: #1A1A1A;
+  background-color: #1e1e1e;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
@@ -103,26 +103,4 @@
 .button-28-small:active {
   box-shadow: none;
   transform: translateY(0);
-}
-
-
-
-.btn-edit {
-  color: #fff;
-  border: 1px solid #fff;
-}
-
-.btn-destroy {
-  color: #fff;
-  border: 1px solid #fff;
-}
-
-.btn-edit:hover {
-  color: #fff;
-  border: 1px solid #fff;
-}
-
-.btn-destroy:hover {
-  color: #fff;
-  border: 1px solid #fff;
 }

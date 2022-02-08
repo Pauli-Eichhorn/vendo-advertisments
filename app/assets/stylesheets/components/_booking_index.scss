@@ -6,28 +6,59 @@
 }
 
 .card-booking-title {
-  color: #000;
+  color: #fff;
 }
 
 .card-booking-text {
-  color: #000;
-
+  color: #fff;
 }
 
 .card-booking {
-  background-color: #fff;
   border-radius: 15px;
   padding-top: 30px;
   padding-right: 30px;
   padding-left: 30px;
   padding-bottom: 20px;
+  border: 2px solid #fff;
+  width: 320px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-booking-client{
-  background-color: #fff;
   border-radius: 15px;
   padding-top: 30px;
   padding-right: 30px;
   padding-left: 30px;
   padding-bottom: 20px;
+  border: 2px solid #fff;
+  width: 320px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.btn-reject, .btn-accept{
+  color: #fff;
+  background-color: #000;
+  border-radius: 15x;
+  border: solid 2px #fff;
+}
+
+.btn-accept:hover {
+  color: #000;
+  background-color: #fff;
+  border-radius: 15x;
+  border: solid 2px rgb(67, 193, 67);
+}
+
+.btn-reject:hover {
+  color: #000;
+  background-color: #fff;
+  border-radius: 15x;
+  border: solid 2px rgb(189, 51, 51);
 }
