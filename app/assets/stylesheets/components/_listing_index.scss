@@ -3,8 +3,14 @@
   }
 
 .right-container-index {
-  margin-top: 100px;
-  // background-color: #0c0c0f;
+  padding-top: 100px;
+  background-color: #0c0c0f;
+}
+
+#underline-name{
+  text-decoration: underline;
+  text-decoration-color: white;
+  margin-top: 5px;
 }
 
 @media (max-width: 1000px) {
@@ -17,16 +23,17 @@
   .card-index {
     width: 350px;
     height: 350px;
-    color: #0C0C0E;
+    color: white;
     text-decoration: none;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-    background: rgb(253, 253, 253);
+    // box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    // background-color: #0e0e0f;
     border-radius: 10px;
     margin-top: 30px;
     margin-bottom: 50px;
     padding-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
+    // border: 1px solid white;
   }
 
   .card-index :hover {
@@ -38,13 +45,17 @@
     width: 350px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+    // border-radius: 10px;
+    // -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
   }
 
   .card-index-content {
-    margin-left: 25px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    border: 1px solid white;
+    // border-radius: 10px;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
   }
 }
 
@@ -102,6 +113,11 @@
     width:100%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   }
+
+  .right-container-index {
+  padding-top: 35px;
+  background-color: #0c0c0f;
+}
 
 }
 
