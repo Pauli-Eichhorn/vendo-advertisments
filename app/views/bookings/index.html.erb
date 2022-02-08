@@ -44,17 +44,17 @@
       <div class="row">
         <% if @my_bookings %>
           <% @my_bookings.each do |request| %>
-            <div class="col">
+            <div class="col text-center">
               <div class="card-booking" id="booking-<%= request.id %>">
                 <h5 class="card-booking-title text-center"><%= request.listing.name %></p></h5>
-                <p class="card-booking-title">Location: <%= request.listing.location %></p>
-                <p class="card-booking-text">Starting Date: <%= request.start_date %></p>
-                <p class="card-booking-text">Ending Date: <%= request.end_date %></p>
-                <p class="card-booking-text">Booked by: <%= request.user.first_name + " " + request.user.last_name %></p>
-                <p class="card-booking-text">Clients Adress: <%= request.user.address%></p>
-                <p class="card-booking-text">Status: <%= request.status %></p>
-                <%= link_to "Accept", accept_path(booking_id: request.id), method: :patch, class:"btn btn-success", data: {confirm: "Are you sure you want to accept?"} %>
-                <%= link_to "Reject", reject_path(booking_id: request.id), method: :patch, class:"btn btn-info", data: {confirm: "Are you sure you want to reject?"}%>
+                <p class="card-booking-title"><strong>Location: </strong> <%= request.listing.location %></p>
+                <p class="card-booking-text"><strong>Starting Date: </strong><%= request.start_date %></p>
+                <p class="card-booking-text"><strong>Ending Date: </strong><%= request.end_date %></p>
+                <p class="card-booking-text"><strong>Booked by: </strong><%= request.user.first_name + " " + request.user.last_name %></p>
+                <p class="card-booking-text"><strong>Clients Adress: </strong><%= request.user.address%></p>
+                <p class="card-booking-text"><strong>Status: </strong><%= request.status %></p>
+                <%= link_to "Accept", accept_path(booking_id: request.id), method: :patch, class:"btn btn-accept", data: {confirm: "Are you sure you want to accept?"} %>
+                <%= link_to "Reject", reject_path(booking_id: request.id), method: :patch, class:"btn btn-reject", data: {confirm: "Are you sure you want to reject?"}%>
               </div>
             </div>
           <% end %>
