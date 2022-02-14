@@ -1,6 +1,5 @@
 .show-container {
   overflow: hidden;
-  display: flex;
   align-items: center;
   margin: 50px;
 }
@@ -13,6 +12,10 @@
 
 .info-text{
   color: white;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }
 
 .button-28 {
@@ -103,4 +106,15 @@
 .button-28-small:active {
   box-shadow: none;
   transform: translateY(0);
+}
+
+.carousel-item img{
+  width: 100%;
+  height: 500px;
+}
+
+.images-show-multi {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
