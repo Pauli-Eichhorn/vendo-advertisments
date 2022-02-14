@@ -28,10 +28,10 @@ file2 = URI.open('https://cdn.pixabay.com/photo/2015/01/01/20/48/advertising-586
 file3 = URI.open('https://cdn.pixabay.com/photo/2017/08/06/04/58/people-2588911_1280.jpg')
 file4 = URI.open('https://cdn.pixabay.com/photo/2014/12/16/09/17/billboard-570104_1280.jpg')
 
-listing1.photo.attach(io: file1, filename: '1.jpg', content_type: 'image/jpg')
-listing2.photo.attach(io: file2, filename: '2.jpg', content_type: 'image/jpg')
-listing3.photo.attach(io: file3, filename: '3.jpg', content_type: 'image/jpg')
-listing4.photo.attach(io: file4, filename: '4.jpg', content_type: 'image/jpg')
+listing1.photo1.attach(io: file1, filename: '1.jpg', content_type: 'image/jpg')
+listing2.photo1.attach(io: file2, filename: '2.jpg', content_type: 'image/jpg')
+listing3.photo1.attach(io: file3, filename: '3.jpg', content_type: 'image/jpg')
+listing4.photo1.attach(io: file4, filename: '4.jpg', content_type: 'image/jpg')
 
 puts 'saving.....'
 
