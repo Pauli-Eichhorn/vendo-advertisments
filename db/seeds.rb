@@ -19,7 +19,7 @@ puts 'user created'
 listing1 = Listing.new(name: '1', description: 'I love cooking. I am not a professional cook but I am a good cook. I can cook anything really I just need one day preperation.', price: '42', location: 'Goltsteinstr. 150, Cologne, Germany', availability:"2021-12-20")
 listing2 = Listing.new(name: '2', description: 'I worked as a cook for more than 5 years. I can cook any french dish. My specialty is steak tartare', price: '50', location: 'Rudower Straße 44, Berlin, Germany', availability:"2021-11-17")
 listing3 = Listing.new(name: '3', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '45', location: 'Heerweg 671, Bremen, Germany', availability: "2022-01-17")
-listing4 = Listing.new(name: '007-007', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '45', location: 'Heerweg 671, Bremen, Germany', availability: "2022-01-17")
+listing4 = Listing.new(name: '4', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '45', location: 'Heerweg 671, Bremen, Germany', availability: "2022-01-17")
 
 puts 'listings created'
 
