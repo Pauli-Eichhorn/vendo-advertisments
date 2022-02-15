@@ -60,11 +60,11 @@ header * {
 .head-text{
   flex-grow: 1;
   padding: auto;
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s; /* Firefox < 16 */
-    -ms-animation: fadein 2s; /* Internet Explorer */
-      -o-animation: fadein 2s; /* Opera < 12.1 */
-        animation: fadein 2s;
+  -webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 6s; /* Firefox < 16 */
+    -ms-animation: fadein 6s; /* Internet Explorer */
+      -o-animation: fadein 6s; /* Opera < 12.1 */
+        animation: fadein 6s;
 }
 
 .title-home {
@@ -141,11 +141,11 @@ header * {
   margin-bottom: 150px;
   margin-left: 10px;
   margin-right: 10px;
-    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 3s; /* Firefox < 16 */
-        -ms-animation: fadein 3s; /* Internet Explorer */
-         -o-animation: fadein 3s; /* Opera < 12.1 */
-            animation: fadein 3s;
+    -webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 6s; /* Firefox < 16 */
+        -ms-animation: fadein 6s; /* Internet Explorer */
+         -o-animation: fadein 6s; /* Opera < 12.1 */
+            animation: fadein 6s;
 }
 
 @media (min-width:649px){
@@ -299,6 +299,14 @@ p{
     max-width: 230px;
   }
 }
+
+// .choose-screen{
+//   padding-top: 80px;
+// }
+
+// .choose-time{
+//   padding-top: 40px;
+// }
 
 img{
   width: 40px;
