@@ -28,27 +28,6 @@
 
 <main>
 
-  <div class="how-to-book justify-content-around ">
-    <%# <i class="fas fa-screen-users"></i> %>
-    <div class="choose-screen text-left ml-4">
-      <h3>1.</h3>
-        <h5><strong>Choose your screen</strong></h5>
-      <p>Choose a screen of your liking at your prefered location</p>
-    </div>
-    <%# <i class="fa-solid fa-calendar-clock"></i> %>
-    <div class="choose-time text-left ml-4">
-      <h3>2.</h3>
-        <h5><strong>Decide on a time</strong></h5>
-      <p>Book the screen by deciding on the time spam you want to book it for</p>
-    </div>
-    <div class="upload-pictures text-left mx-4">
-      <%= image_tag "vendo-logo.png"%>
-        <h5><strong>Upload your pictures</strong></h5>
-      <p>Display your advertisment on the screen</p>
-    <%# <i class="fa-solid fa-camera-retro"></i> %>
-    </div>
-  </div>
-
   <div class="home-text-1">
     <div class="row">
       <div class="col-md-6 mx-auto">
@@ -84,5 +63,49 @@
       </div>
     </div>
 
+  </div>
+  <div class="outer-container-instructions">
+    <h2>How to Book a Screen</h2>
+    <div class="how-to-book-advert justify-content-around ">
+
+      <div class="row">
+
+        <div class="col">
+          <%# <i class="fas fa-screen-users"></i> %>
+          <div class="choose-screen text-left ml-4">
+            <h3>1.</h3>
+            <h5><strong>Choose your screen</strong></h5>
+            <p>Choose a screen of your liking at your prefered location</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <%link_to "here", "/listings", class:"here-btn-home" %>
+          <%# <i class="fa-solid fa-calendar-clock"></i> %>
+          <div class="choose-time text-left ml-4">
+            <h3>2.</h3>
+            <h5><strong>Choose your duration</strong></h5>
+            <p>Decide form when to when your want your ads to run. You can later extend the duration by simply writing us an email.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="upload-pictures text-left mx-4">
+            <h3>3.</h3>
+            <h5><strong>Upload you ad</strong></h5>
+            <p>Simply upload your advertisement video or picture where indicated</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class='upload-pictures text-left mx-4'>
+            <h3>4.</h3>
+            <h5><strong>Pay</strong></h5>
+            <p>Simply pay online and see you advertisements up and running in a given location</p>
+          </div>
+          <%# <i class="fa-solid fa-camera-retro"></i> %>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
