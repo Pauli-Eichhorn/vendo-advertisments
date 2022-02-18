@@ -308,24 +308,27 @@ p{
 .how-to-partner{
   display: flex;
   color: white;
+  padding: 10px 0px 50px;
+}
 
 p{
     max-width: 230px;
   }
 }
 
-// .choose-screen{
-//   padding-top: 80px;
-// }
+.choose-screen{
+  padding-top: 80px;
+}
 
-// .choose-time{
-//   padding-top: 40px;
-// }
+.choose-time{
+  padding-top: 40px;
+}
 
 img{
   width: 40px;
   height: 40px;
 }
+
 
 .title-instructions-home {
   color: #fff;
@@ -366,4 +369,5 @@ img{
   .upload-pictures {
     padding: 0px;
   }
+
 }
