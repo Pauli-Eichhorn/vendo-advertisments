@@ -293,22 +293,27 @@ button.fancy {
 .how-to-book{
   display: flex;
   color: white;
-  padding-top: 100px;
+  padding: 10px 0px 50px;
 
 p{
     max-width: 230px;
   }
 }
 
-// .choose-screen{
-//   padding-top: 80px;
-// }
+.choose-screen{
+  padding-top: 80px;
+}
 
-// .choose-time{
-//   padding-top: 40px;
-// }
+.choose-time{
+  padding-top: 40px;
+}
 
 img{
   width: 40px;
   height: 40px;
+}
+
+.Description{
+  text-decoration: underline;
+  padding: 30px 0px 0px;
 }
