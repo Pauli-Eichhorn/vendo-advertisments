@@ -290,10 +290,26 @@ button.fancy {
 
 }
 
-.how-to-book{
+.how-to-book-advert{
+  display: flex;
+  color: #fff;
+  margin-top:50px;
+p{
+    max-width: 230px;
+  }
+}
+
+.outer-container-instructions {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  color: #fff;
+}
+
+.how-to-partner{
   display: flex;
   color: white;
   padding: 10px 0px 50px;
+}
 
 p{
     max-width: 230px;
@@ -313,7 +329,45 @@ img{
   height: 40px;
 }
 
-.Description{
+
+.title-instructions-home {
+  color: #fff;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.btn-home-here {
+  color: #fff;
   text-decoration: underline;
-  padding: 30px 0px 0px;
+  z-index: 100;
+}
+
+
+@media (max-width:600px){
+  .choose-screen {
+  padding: 50px;
+  }
+
+  .choose-time {
+    padding: 50px;
+  }
+
+  .upload-pictures {
+    padding: 50px;
+  }
+}
+
+@media (min-width:600px){
+  .choose-screen {
+    padding: 0px;
+  }
+
+  .choose-time {
+    padding: 0px;
+  }
+
+  .upload-pictures {
+    padding: 0px;
+  }
+
 }

@@ -27,8 +27,6 @@
 </header>
 
 <main>
-
-
   <div class="home-text-1">
     <div class="row">
       <div class="col-md-6 mx-auto">
@@ -99,31 +97,49 @@
       <input type="text" class="form-control" placeholder="Last name">
     </div>
   </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputAddress">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
+
+  <div class="outer-container-instructions">
+    <h2>How to Book a Screen</h2>
+    <div class="how-to-book-advert justify-content-around ">
+
+      <div class="row">
+
+        <div class="col">
+          <%# <i class="fas fa-screen-users"></i> %>
+          <div class="choose-screen text-left ml-4">
+            <h3>1.</h3>
+            <h5><strong>Choose your screen</strong></h5>
+            <p>Choose a screen of your liking at your prefered location <%= link_to "here", listings_path, class:"btn-home-here", role:"button" %></p>
+          </div>
+        </div>
+
+        <div class="col">
+          <%# <i class="fa-solid fa-calendar-clock"></i> %>
+          <div class="choose-time text-left ml-4">
+            <h3>2.</h3>
+            <h5><strong>Choose your duration</strong></h5>
+            <p>Decide form when to when your want your ads to run. You can later extend the duration by simply writing us an email</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="upload-pictures text-left mx-4">
+            <h3>3.</h3>
+            <h5><strong>Upload you ad</strong></h5>
+            <p>Simply upload your advertisement video or picture where indicated</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class='upload-pictures text-left mx-4'>
+            <h3>4.</h3>
+            <h5><strong>Pay</strong></h5>
+            <p>Simply pay online and see you advertisements up and running in a given location</p>
+          </div>
+          <%# <i class="fa-solid fa-camera-retro"></i> %>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="form-row">
-    <div class="col-md-6">
-      <label for="inputLastName4">Subject</label>
-      <input type="text" class="form-control" placeholder="Your Subject">
-    </div>
-    <div class="col-md-6">
-    <label for="uploadimage">Upload an Image</label>
-    <input type="file" class="form-control-file" id="uploadimage">
-    </div>
-  </div>
-  <div class="mb-3">
-    <label for="Message">Message</label>
-    <textarea class="form-control" id="Message" placeholder="Message" required></textarea>
-  </div>
-  <button type="submit" class="button-28">Submit</button>
-</form>
 
 </main>

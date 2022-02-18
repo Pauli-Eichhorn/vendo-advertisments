@@ -60,11 +60,6 @@
     <p><i class="fas fa-thumbtack"></i><strong> Location: </strong><%= @listing.location %></p>
     <p><i class="fas fa-tags"></i><strong> Price: </strong><%= @listing.price %>￡/day</p>
     <%# <h6><strong>Bookings:</strong></h6> %>
-    <ul>
-      <% @listing.bookings.each do |booking| %>
-        <li><h6> <%= booking.start_date %> - <%= booking.end_date %></h6></li>
-      <% end %>
-    </ul>
     <%# <button class="button-28" role="button">Button 28</button> %>
     <%= link_to "Book this screen", new_listing_booking_path(@listing), class:'button-28 m-1', role:'button'%>
     <%= link_to "Back", listings_path, class:"button-28 m-1", role:"button" %>
