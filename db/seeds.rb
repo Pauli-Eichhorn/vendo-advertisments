@@ -7,19 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 Listing.destroy_all
+Partner.destroy_all
 User.destroy_all
 
 puts 'everything destroyed'
 
-user1 = User.create!(email: "vendoadvertisements@gmail.com", password: "21Vend0@$$$", first_name: "Vendo", last_name: "Advertisements", address: "Bewdley DY12 1LN", owner: true)
-user2 = User.create!(email: "user2@gmail.com", password: "12345678", first_name: "Carl", address: "Goltsteinstr. 150 50968 Cologne", last_name: "Schierstädt", owner: false)
+user1 = User.create!(email: "vendoadvertisements@gmail.com", password: "21Vend0@$$$", first_name: "Vendo", last_name: "Advertisements", address: "Bewdley DY12 1LN", owner: true, country: "England", city:"Bewdley", zip:"DY12 1LN", phone:"07904797117")
+user2 = User.create!(email: "user2@gmail.com", password: "12345678", first_name: "Carl", address: "Goltsteinstr. 150 50968 Cologne", last_name: "Schierstädt", owner: false, country: "Germany", city:"Cologne", zip:"50968", phone:"07904797117")
 
 puts 'user created'
 
-listing1 = Listing.new(name: '1', description: 'I love cooking. I am not a professional cook but I am a good cook. I can cook anything really I just need one day preperation.', price: '42', location: 'Goltsteinstr. 150, Cologne, Germany', availability:"2021-12-20")
-listing2 = Listing.new(name: '2', description: 'I worked as a cook for more than 5 years. I can cook any french dish. My specialty is steak tartare', price: '50', location: 'Rudower Straße 44, Berlin, Germany', availability:"2021-11-17")
-listing3 = Listing.new(name: '3', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '45', location: 'Heerweg 671, Bremen, Germany', availability: "2022-01-17")
-listing4 = Listing.new(name: '4', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '45', location: 'Heerweg 671, Bremen, Germany', availability: "2022-01-17")
+listing1 = Listing.new(name: '1', description: 'I love cooking. I am not a professional cook but I am a good cook. I can cook anything really I just need one day preperation.', price: '42', location: 'Goltsteinstr. 150, Cologne, Germany')
+listing2 = Listing.new(name: '2', description: 'I worked as a cook for more than 5 years. I can cook any french dish. My specialty is steak tartare', price: '50', location: 'Rudower Straße 44, Berlin, Germany')
+listing3 = Listing.new(name: '3', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '45', location: 'Heerweg 671, Bremen, Germany')
+listing4 = Listing.new(name: '4', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '45', location: 'Heerweg 671, Bremen, Germany')
 
 puts 'listings created'
 
