@@ -12,8 +12,8 @@
             <div class="col">
               <div class="card-booking-client">
                 <h5 class="card-booking-title"><%= booking.user.first_name %></p></h5>
-                <p class="card-booking-text">Starts on <%= booking.start_date %></p>
-                <p class="card-booking-text">Until <%= booking.end_date %></p>
+                <p class="card-booking-text">Starts on: <%= booking.start_date %></p>
+                <p class="card-booking-text">Ends on: <%= booking.end_date %></p>
                 <% if booking.status == "accepted" %>
                   <span class="badge badge-success"><%= booking.status %></span>
                 <% else %>
@@ -44,26 +44,28 @@
       <div class="row">
         <% if @my_bookings %>
           <% @my_bookings.each do |request| %>
-            <div class="col text-center">
+            <div class="col ">
               <div class="card-booking" id="booking-<%= request.id %>">
-                <h5 class="card-booking-title text-center"><%= request.listing.name %></p></h5>
+                <h5 class="card-booking-title text-center"> <%= request.listing.name %></p></h5>
                 <p class="card-booking-title"><strong>Location: </strong> <%= request.listing.location %></p>
                 <p class="card-booking-text"><strong>Starting Date: </strong><%= request.start_date %></p>
                 <p class="card-booking-text"><strong>Ending Date: </strong><%= request.end_date %></p>
                 <p class="card-booking-text"><strong>Booked by: </strong><%= request.user.first_name + " " + request.user.last_name %></p>
+                <p class="card-booking-text"><strong>Email: </strong><%= request.user.email %></p>
+                <p class="card-booking-text"><strong>Phone: </strong><%= request.user.phone %></p>
                 <p class="card-booking-text"><strong>Clients Adress: </strong><%= request.user.address%></p>
-                <p class="card-booking-text"><strong>Status: </strong><%= request.status %></p>
-                <%= link_to "Accept", accept_path(booking_id: request.id), method: :patch, class:"btn btn-accept", data: {confirm: "Are you sure you want to accept?"} %>
-                <%= link_to "Reject", reject_path(booking_id: request.id), method: :patch, class:"btn btn-reject", data: {confirm: "Are you sure you want to reject?"}%>
+                <p class="card-booking-text mb-3"><strong>Status: </strong><%= request.status %></p>
+                <div class="text-center">
+                  <%= link_to "Accept", accept_path(booking_id: request.id), method: :patch, class:"btn btn-accept", data: {confirm: "Are you sure you want to accept?"} %>
+                  <%= link_to "Reject", reject_path(booking_id: request.id), method: :patch, class:"btn btn-reject", data: {confirm: "Are you sure you want to reject?"}%>
+                </div>
               </div>
             </div>
           <% end %>
-          <% else %>
-      No bookings yet
+        <% else %>
+          <h1>There are no bookings yet</h1>
         <% end %>
       </div>
     </div>
   </div>
-
-<%# <%= link_to "Back to all Bartenders", listings_path, class: "btn btn-primary w-20" %> %>
 <% end %>
