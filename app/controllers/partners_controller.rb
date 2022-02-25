@@ -12,12 +12,13 @@ class PartnersController < ApplicationController
 
   def new
     @partner = Partner.new
+    @user = User.find(params[:user_id])
   end
 
   def create
     @user = User.find(params[:user_id])
     @partner = Partner.new(partner_params)
-    # @partner.user = @user
+    @partner.user = @user
     if @partner.save
       redirect_to partners_path
     else
@@ -28,6 +29,6 @@ class PartnersController < ApplicationController
   private
 
   def partner_params
-  params.require(:partner).permit(:first_name, :last_name, :address, :city, :country, :zip, :message)
+    params.require(:partner).permit(:first_name, :last_name, :address, :city, :country, :zip, :message)
   end
 end
