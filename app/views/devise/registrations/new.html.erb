@@ -1,5 +1,5 @@
-<div class='signup-box col-4'>
-  <div class='login-text text-center mt-4'>
+<div class='signup-box col-11 col-lg-6'>
+  <div class='login-text text-center '>
     <h2>Sign Up For Free</h2>
   </div>
 
@@ -7,14 +7,18 @@
     <%= f.error_notification %>
     <div class="form-inputs">
       <div class="d-flex">
-        <%= f.input :first_name,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "first-name" }%>
-        <%= f.input :last_name,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "last-name" }%>
+        <div class="mr-2">
+          <%= f.input :first_name,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "first-name" }%>
+        </div>
+        <div class="ml-2">
+          <%= f.input :last_name,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "last-name" }%>
+        </div>
       </div>
 
       <%= f.input :email,
@@ -31,18 +35,24 @@
                   input_html: { autocomplete: "address" }%>
 
       <div class="d-flex">
-        <%= f.input :city,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "city" }%>
-        <%= f.input :zip,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "zip" } %>
-        <%= f.input :country,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "country" } %>
+        <div class="mr-2">
+          <%= f.input :city,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "city" }%>
+        </div>
+        <div class="mr-2">
+          <%= f.input :zip,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "zip" } %>
+        </div>
+        <div >
+          <%= f.input :country,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "country" } %>
+          </div>
       </div>
       <%= f.input :password,
                   required: true,
