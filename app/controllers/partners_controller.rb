@@ -15,7 +15,9 @@ class PartnersController < ApplicationController
   end
 
   def create
+    @user = User.find(params[:user_id])
     @partner = Partner.new(partner_params)
+    # @partner.user = @user
     if @partner.save
       redirect_to partners_path
     else
@@ -28,5 +30,4 @@ class PartnersController < ApplicationController
   def partner_params
   params.require(:partner).permit(:first_name, :last_name, :address, :city, :country, :zip, :message)
   end
-
 end
