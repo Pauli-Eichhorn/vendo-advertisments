@@ -1,11 +1,8 @@
-<h1>partners index</h1>
-<p>partners: <%= Partner.all %></p>
 <div class="row">
           <% @partners.each do |partner| %>
             <div class="col">
               <div class="card-booking-client">
-                <h5 class="card-booking-title"><%= partner.first_name %> <%= partner.last_name %></p></h5>
-
+                <h5 class="card-booking-title"><%= partner.user.first_name %> <%= partner.user.last_name %></p></h5>
               </div>
             </div>
           <% end %>

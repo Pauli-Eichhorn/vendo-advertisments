@@ -6,6 +6,7 @@ class CreatePartners < ActiveRecord::Migration[6.1]
       t.string :postal_code
       t.string :city
       t.string :country
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
