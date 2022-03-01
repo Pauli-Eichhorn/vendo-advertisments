@@ -1,9 +1,26 @@
-<div class="row">
+
+<% if current_user.owner == true %>
+
+  <div class="headers">
+    <h1 class="header-index-booking"><strong>Partner Requests</strong></h1>
+  </div>
+
+  <div class="container">
+    <div class='cards-booking mt-4'>
+      <div class="row ">
+
           <% @partners.each do |partner| %>
-            <div class="col">
-              <div class="card-booking-client">
-                <h5 class="card-booking-title"><%= partner.user.first_name %> <%= partner.user.last_name %></p></h5>
+            <div class="col border-line-partners mt-4 p-3">
+                <h5 class="card-booking-title text-center"> <%= partner.user.first_name %> <%= partner.user.last_name %></p></h5>
+                <p class="card-booking-text"><strong>Email: </strong><%= partner.user.email %></p>
+                <p class="card-booking-text"><strong>Phone: </strong><%= partner.user.phone %></p>
+                <p class="card-booking-title"><strong>Screen Location: </strong><%= partner.street_name_and_number %>, <%= partner.postal_code %>, <%= partner.city %>, <%= partner.country %></p>
+                <p class="card-booking-text"><strong>Clients Adress: </strong><%= partner.user.address%>, <%= partner.user.zip%>, <%= partner.user.city%>, <%= partner.user.country%></p>
+                <p class="card-booking-text"><strong>Message: </strong><%= partner.message%></p>
               </div>
             </div>
-          <% end %>
-</div>
+          <% end %>user.
+      </div>
+    </div>
+  </div>
+<% end %>
