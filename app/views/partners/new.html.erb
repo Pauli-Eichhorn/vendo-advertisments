@@ -12,7 +12,7 @@
           <%= f.input :photo2, as: :file, label: false, wrapper_html: { class: "text-center" }, input_html: { class: "d-inline" } %>
           <%= f.input :photo3, as: :file, label: false, wrapper_html: { class: "text-center" }, input_html: { class: "d-inline" } %>
           <%= f.input :message, :input_html => { :class => 'partner-input' } %>
-          <%= f.submit "Submit", class: "btn btn-nav w-100 mr-sm-4" %>
+          <%= f.submit "Submit", class: "btn btn-nav w-100 mr-sm-4", data: { confirm: "Are you sure you want to send the partner request?" } %>
         <% end %>
       </div>
   </div>

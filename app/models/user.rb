@@ -6,4 +6,12 @@ class User < ApplicationRecord
   has_many :bookings, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :address, presence: true
+  validates :city, presence: true
+  validates :country, presence: true
+  validates :zip, presence: true
+  validates :phone, presence: true
+  validates :owner, presence: false
 end
