@@ -29,7 +29,7 @@
     // background-color: #0e0e0f;
     border-radius: 10px;
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     padding-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -41,8 +41,11 @@
   }
 
   .card-index img {
-    height: 150px;
+    height: 190px;
     width: 350px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     // border-radius: 10px;
@@ -50,7 +53,10 @@
   }
 
   .card-index-content {
-    border: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-top: 2px solid white;
     // border-radius: 10px;
     padding: 20px;
     border-bottom-left-radius: 10px;
@@ -95,6 +101,7 @@
   margin-top: 35px;
   margin-bottom: 35px;
 }
+
 
 @media (max-width:844px){
   .listings-index-main {
