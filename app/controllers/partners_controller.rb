@@ -11,7 +11,7 @@ class PartnersController < ApplicationController
     @partner = Partner.new(partner_params)
     @partner.user = current_user
     if @partner.save
-      redirect_to partners_path
+      redirect_to root_path
     else
       render :new
     end
