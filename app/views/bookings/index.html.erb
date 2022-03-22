@@ -16,6 +16,9 @@
                 <p class="card-booking-text">Ends on: <%= booking.end_date %></p>
                 <% if booking.status == "accepted" %>
                   <span class="badge badge-success"><%= booking.status %></span>
+                  <form action="/create-checkout-session" method="POST">
+                    <button type="submit">PAY</button>
+                  </form>
                 <% else %>
                   <span class="badge badge-secondary"><%= booking.status %></span>
                 <% end %>
