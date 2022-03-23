@@ -16,9 +16,7 @@
                 <p class="card-booking-text">Ends on: <%= booking.end_date %></p>
                 <% if booking.status == "accepted" %>
                   <span class="badge badge-success"><%= booking.status %></span>
-                  <form action="/create-checkout-session" method="POST">
-                    <button type="submit">PAY</button>
-                  </form>
+                  <%= button_to "Pay Now", checkout_create_path, params: {listing_id: booking.listing.id, id: booking.id}, remote: true %>
                 <% else %>
                   <span class="badge badge-secondary"><%= booking.status %></span>
                 <% end %>

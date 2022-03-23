@@ -17,10 +17,10 @@ user2 = User.create!(email: "user2@gmail.com", password: "12345678", first_name:
 
 puts 'user created'
 
-listing1 = Listing.new(name: '1', description: 'I love cooking. I am not a professional cook but I am a good cook. I can cook anything really I just need one day preperation.', price: '42', location: 'Goltsteinstr. 150, Cologne, Germany')
-listing2 = Listing.new(name: '2', description: 'I worked as a cook for more than 5 years. I can cook any french dish. My specialty is steak tartare', price: '50', location: 'Rudower Straße 44, Berlin, Germany')
-listing3 = Listing.new(name: '3', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '45', location: 'Heerweg 671, Bremen, Germany')
-listing4 = Listing.new(name: '4', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '45', location: 'Heerweg 671, Bremen, Germany')
+listing1 = Listing.new(name: '1', description: 'I love cooking. I am not a professional cook but I am a good cook. I can cook anything really I just need one day preperation.', price: '12', location: 'Goltsteinstr. 150, Cologne, Germany')
+listing2 = Listing.new(name: '2', description: 'I worked as a cook for more than 5 years. I can cook any french dish. My specialty is steak tartare', price: '10', location: 'Rudower Straße 44, Berlin, Germany')
+listing3 = Listing.new(name: '3', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '5', location: 'Heerweg 671, Bremen, Germany')
+listing4 = Listing.new(name: '4', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '6', location: 'Heerweg 671, Bremen, Germany')
 
 puts 'listings created'
 
