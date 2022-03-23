@@ -14,5 +14,7 @@ Rails.application.routes.draw do
 
   patch "accept", to: 'bookings#accept', as: :accept
   patch "reject", to: 'bookings#reject', as: :reject
+  resources :checkout, only: [:create]
+  post "checkout/create", to: "checkout#create"
 
 end
