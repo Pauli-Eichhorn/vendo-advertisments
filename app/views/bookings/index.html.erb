@@ -11,12 +11,14 @@
           <% @bookings.each do |booking| %>
             <div class="col">
               <div class="card-booking-client">
-                <h5 class="card-booking-title"><%= booking.user.first_name %></p></h5>
+                <h5 class="card-booking-title"><%= booking.user.first_name %> <%= booking.user.last_name %></p></h5>
                 <p class="card-booking-text">Starts on: <%= booking.start_date %></p>
                 <p class="card-booking-text">Ends on: <%= booking.end_date %></p>
                 <% if booking.status == "accepted" %>
-                  <span class="badge badge-success"><%= booking.status %></span>
-                  <%= button_to "Pay Now", checkout_create_path, params: {listing_id: booking.listing.id, id: booking.id}, remote: true %>
+                  <div class="text-center">
+                    <span class="badge badge-success mb-3"><%= booking.status %></span>
+                    <%= button_to "Pay Now", checkout_create_path, params: {listing_id: booking.listing.id, id: booking.id}, remote: true, class:"pay-btn" %>
+                  </div>
                 <% else %>
                   <span class="badge badge-secondary"><%= booking.status %></span>
                 <% end %>
