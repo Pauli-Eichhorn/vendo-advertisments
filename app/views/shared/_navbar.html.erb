@@ -15,46 +15,47 @@
 
           <% if current_user.owner == true %>
               <li>
-                <h5 class="h5-navbar"><%= link_to "HOME", "/", class: "nav-link" %></h5>
+                <h5 class="h5-navbar"><%= link_to "Home", "/", class: "nav-link" %></h5>
               </li>
               <li>
-                <h5 class="h5-navbar"><%= link_to "ADD SCREEN", "/listings/new", class: "nav-link" %> </h5>
+                <h5 class="h5-navbar"><%= link_to "Add Screen", "/listings/new", class: "nav-link" %> </h5>
               </li>
               <li>
-                <h5 class="h5-navbar"><%= link_to "SCREENS", "/listings", class: "nav-link" %></h5>
+                <h5 class="h5-navbar"><%= link_to "Screens", "/listings", class: "nav-link" %></h5>
               </li>
               <li>
-                <h5 class="h5-navbar"><%= link_to "BOOKINGS", "/bookings", class: "nav-link" %></h5>
+                <h5 class="h5-navbar"><%= link_to "Bookings", "/bookings", class: "nav-link" %></h5>
               </li>
               <li>
-                <h5 class="h5-navbar"><%= link_to "GET IN TOUCH", "mailto:vendoadvertisements@gmail.com?subject=Getting in Touch", class: "nav-link" %></h5>
-              </li>
-
-              <li>
-                <h5 class="h5-navbar"><%= link_to "PARTNER REQUESTS", "/partners", class: "nav-link" %></h5>
+                <h5 class="h5-navbar"><%= link_to "Get In Touch", "mailto:vendoadvertisements@gmail.com?subject=Getting in Touch", class: "nav-link" %></h5>
               </li>
 
               <li>
-                <h5 class="h5-navbar"><%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "nav-link"%></h5>
+                <h5 class="h5-navbar"><%= link_to "Partner Requests", "/partners", class: "nav-link" %></h5>
+              </li>
+
+              <li>
+                <h5 class="h5-navbar"><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link"%></h5>
               </li>
           <% elsif %>
+            <li>
+              <h5 class="h5-navbar"><%= link_to "SCREENS", "/listings", class: "nav-link" %></h5>
+            </li>
 
             <li>
               <h5 class="h5-navbar"><%= link_to "HOME", "/", class: "nav-link" %></h5>
             </li>
 
             <li>
-              <h5 class="h5-navbar"><%= link_to "SCREENS", "/listings", class: "nav-link" %></h5>
-            </li>
-            <li>
               <h5 class="h5-navbar"><%= link_to "MY BOOKINGS", "/bookings", class: "nav-link" %></h5>
-            </li>
-            <li>
-              <h5 class="h5-navbar"><%= link_to "GET IN TOUCH", "mailto:vendoadvertisements@gmail.com?subject=Getting in Touch", class: "nav-link" %></h5>
             </li>
 
             <li>
               <h5 class="h5-navbar"><%= link_to "BECOME PARTNER", "/partners/new", class: "nav-link" %></h5>
+            </li>
+
+            <li>
+              <h5 class="h5-navbar"><%= link_to "GET IN TOUCH", "mailto:vendoadvertisements@gmail.com?subject=Getting in Touch", class: "nav-link" %></h5>
             </li>
 
             <li>

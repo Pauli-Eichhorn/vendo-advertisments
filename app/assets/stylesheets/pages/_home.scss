@@ -1,3 +1,5 @@
+//general
+
 html {
   height: 100%;
   overflow: hidden;
@@ -15,6 +17,156 @@ body {
   flex-grow: 1;
 }
 
+.invisible {
+  color: rgba(0, 0, 0, 0)
+}
+
+.light-blue {
+  color: #97ECFF;
+}
+
+@media (max-width:550px) {
+  .home-main {
+    top: 500;
+    background-color: #0C0C0E;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid #fff;
+    text-align: center;
+  }
+}
+
+
+@media (min-width:550px) {
+  .home-main {
+    top: 250;
+    background-color: #0C0C0E;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid #fff;
+    text-align: center;
+    padding-left: 150px;
+  }
+}
+
+
+//First box
+
+.home-text-1 {
+  color: #fff;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  text-align: left;
+  width: 100%;
+  -webkit-animation: fadein 3s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 3s;
+  /* Internet Explorer */
+  -o-animation: fadein 3s;
+  /* Opera < 12.1 */
+  animation: fadein 3s;
+}
+
+.vendo-logo-home {
+  height: 200px;
+  width: 152px;
+}
+
+.vendo-logo-home img {
+  height: 200px;
+  width: 200px;
+  margin-top: -50px;
+  margin-left: -32px;
+}
+
+//second box
+
+.home-text-2 {
+  color: #fff;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: left;
+  padding: 15;
+}
+
+@media (min-width:649px){
+  .question-container {
+    display: flex;
+  }
+  .question-1-home {
+    margin-bottom: 50px;
+    color: #fff;
+    text-align: left;
+    width: 200px;
+    flex-grow: 1;
+  }
+  .question-2-home {
+    margin-bottom: 0px;
+    color: #fff;
+    text-align: left;
+    width: 200px;
+    flex-grow: 1;
+  }
+}
+
+//third box
+
+.home-text-3 {
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  text-align: left;
+  padding: 15;
+}
+
+
+
+//forth box
+
+.btn-home-here {
+  color: #97ECFF;;
+  text-decoration: underline;
+  z-index: 100;
+}
+
+.btn-home-here:hover {
+  color: rgba(151, 236, 255, 0.8);
+  text-decoration: underline;
+  z-index: 100;
+}
+
+@media (min-width:649px){
+  .question-container {
+    display: flex;
+  }
+  .instruction-1-home {
+    color: #fff;
+    text-align: left;
+    width: 200px;
+    flex-grow: 1;
+  }
+  .instruction-2-home {
+    color: #fff;
+    padding-top: 80px;
+    text-align: left;
+    width: 200px;
+    flex-grow: 1;
+  }
+}
+
+//GET Started Button
+
+.button-bottom-home {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: -150px;
+}
+
+
 header {
   color: #fff;
   box-sizing: border-box;
@@ -29,6 +181,7 @@ header {
 header, header:before {
   background: 50% 50% / cover;
 }
+
 header::before {
   bottom: 0;
   left: 0;
@@ -77,33 +230,10 @@ header * {
 }
 
 
-@media (max-width:550px){
-  main {
-      top: 500;
-      background-color: #0C0C0E;
-      width: 100%;
-      position: relative;
-      z-index: 2;
-      border-top: 1px solid #fff;
-      text-align: center;
-  }
-}
 
-
-@media (min-width:550px){
-  main {
-      top:250;
-      background-color: #0C0C0E;
-      width: 100%;
-      position: relative;
-      z-index: 2;
-      border-top: 1px solid #fff;
-      text-align: center;
-  }
-}
 
 @media (max-height:600px){
-  main {
+  .home-main {
     top: 50;
     background-color: #0C0C0E;
     width: 100%;
@@ -123,7 +253,7 @@ header * {
 }
 
 @media (height:568px){
-  main {
+  .home-main {
     top: 200;
     background-color: #0C0C0E;
     width: 100%;
@@ -135,44 +265,7 @@ header * {
 }
 
 
-.home-text-1 {
-  color: #fff;
-  margin-top: 150px;
-  margin-bottom: 150px;
-  margin-left: 10px;
-  margin-right: 10px;
-    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 3s; /* Firefox < 16 */
-        -ms-animation: fadein 3s; /* Internet Explorer */
-         -o-animation: fadein 3s; /* Opera < 12.1 */
-            animation: fadein 3s;
-}
 
-@media (min-width:649px){
-  .question-container {
-    display: flex;
-  }
-  .question-1-home {
-    padding-top: 25px;
-    border-right: 1px solid #fff;
-    margin-bottom: 50px;
-    color: #fff;
-    justify-content: center;
-    text-align: center;
-    width: 100px;
-    flex-grow: 1;
-  }
-  .question-2-home {
-    border-left: 1px solid #fff;
-    padding-top: 25px;
-    margin-bottom: 50px;
-    color: #fff;
-    justify-content: center;
-    text-align: center;
-    width: 100px;
-    flex-grow: 1;
-  }
-}
 
 
 
@@ -195,6 +288,15 @@ header * {
     flex-grow: 1;
   }
 }
+
+
+
+
+
+
+
+
+
 
 
 // This is for the get started
@@ -287,87 +389,5 @@ button.fancy {
   }
 
 }
-
-}
-
-.how-to-book-advert{
-  display: flex;
-  color: #fff;
-  margin-top:50px;
-  p{
-    max-width: 230px;
-    }
-
-
-.outer-container-instructions {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  color: #fff;
-}
-
-.how-to-partner{
-  display: flex;
-  color: white;
-  padding: 10px 0px 50px;
-}
-
-p{
-    max-width: 230px;
-  }
-}
-
-.choose-screen{
-  padding-top: 80px;
-}
-
-.choose-time{
-  padding-top: 40px;
-}
-
-img{
-  width: 40px;
-  height: 40px;
-}
-
-
-.title-instructions-home {
-  color: #fff;
-  margin-top: 70px;
-  margin-bottom: 50px;
-}
-
-.btn-home-here {
-  color: #fff;
-  text-decoration: underline;
-  z-index: 100;
-}
-
-
-@media (max-width:600px){
-  .choose-screen {
-  padding: 50px;
-  }
-
-  .choose-time {
-    padding: 50px;
-  }
-
-  .upload-pictures {
-    padding: 50px;
-  }
-}
-
-@media (min-width:600px){
-  .choose-screen {
-    padding: 0px;
-  }
-
-  .choose-time {
-    padding: 0px;
-  }
-
-  .upload-pictures {
-    padding: 0px;
-  }
 
 }
