@@ -22,9 +22,11 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @listing = Listing.find(params[:listing_id])
+    # @user = User.find(params[:user_id])
     @booking.user = current_user
     @booking.listing = @listing
     if @booking.save
+      BookingMailer.with(booking: @booking).new_booking_email.deliver_later
       flash[:notice] = "Thank you for your booking request! We'll contact you soon!"
       redirect_to bookings_path
     else
