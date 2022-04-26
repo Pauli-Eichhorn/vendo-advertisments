@@ -27,8 +27,10 @@ class BookingsController < ApplicationController
     @booking.listing = @listing
     if @booking.save
       BookingMailer.with(booking: @booking).new_booking_email.deliver_later
-      redirect_to listings_path
+      flash[:notice] = "Thank you for your booking request! We'll contact you soon!"
+      redirect_to bookings_path
     else
+      flash[:alert] = "Something went wrong please make sure that you book at least 2 day prior from today and that the booking lasts for at least for 10 days"
       render :new
     end
   end
