@@ -17,26 +17,26 @@
         <% end %>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item carousel-i1 active">
           <%=cl_image_tag @listing.photo1.key, crop: :fill, class:"d-block"%>
         </div>
         <% if @listing.photo2.present? %>
-          <div class="carousel-item">
+          <div class="carousel-item carousel-i1">
             <%=cl_image_tag @listing.photo2.key, crop: :fill, class:"d-block"%>
           </div>
         <% end %>
         <% if @listing.photo3.present? %>
-          <div class="carousel-item">
+          <div class="carousel-item carousel-i1">
             <%=cl_image_tag @listing.photo3.key, crop: :fill, class:"d-block"%>
           </div>
         <% end %>
         <% if @listing.photo4.present? %>
-          <div class="carousel-item">
+          <div class="carousel-item carousel-i1">
             <%=cl_image_tag @listing.photo4.key, crop: :fill, class:"d-block"%>
           </div>
         <% end %>
         <% if @listing.photo5.present? %>
-          <div class="carousel-item">
+          <div class="carousel-item carousel-i1">
             <%=cl_image_tag @listing.photo5.key, crop: :fill, class:"d-block"%>
           </div>
         <% end %>

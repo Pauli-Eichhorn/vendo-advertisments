@@ -11,6 +11,7 @@
 
           <% @partners.each do |partner| %>
             <div class="col border-line-partners mt-4 p-3">
+              <div>
                 <h5 class="card-booking-title text-center"> <%= partner.user.first_name %> <%= partner.user.last_name %></p></h5>
                 <p class="card-booking-text"><strong>Email: </strong><%= partner.user.email %></p>
                 <p class="card-booking-text"><strong>Phone: </strong><%= partner.user.phone %></p>
@@ -18,8 +19,50 @@
                 <p class="card-booking-text"><strong>Clients Adress: </strong><%= partner.user.address%>, <%= partner.user.zip%>, <%= partner.user.city%>, <%= partner.user.country%></p>
                 <p class="card-booking-text"><strong>Message: </strong><%= partner.message%></p>
               </div>
+              <div>
+                <div class="images-show-multi ">
+                  <div  class="carouselIndicators carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <% if partner.photo1.present? %>
+                      <li data-target=".carouselIndicators" data-slide-to="0" class="active"></li>
+                      <% end %>
+                      <% if partner.photo2.present? %>
+                        <li data-target=".carouselIndicators" data-slide-to="1"></li>
+                      <% end %>
+                      <% if partner.photo3.present? %>
+                        <li data-target=".carouselIndicators" data-slide-to="2"></li>
+                      <% end %>
+                    </ol>
+                    <div class="carousel-inner">
+                      <% if partner.photo1.present? %>
+                        <div class="carousel-item active carousel-i2">
+                          <%=cl_image_tag partner.photo1.key, crop: :fill, class:"d-block"%>
+                        </div>
+                      <% end %>
+                      <% if partner.photo2.present? %>
+                        <div class="carousel-item carousel-i2">
+                          <%=cl_image_tag partner.photo2.key, crop: :fill, class:"d-block"%>
+                        </div>
+                      <% end %>
+                      <% if partner.photo3.present? %>
+                        <div class="carousel-item carousel-i2">
+                          <%=cl_image_tag partner.photo3.key, crop: :fill, class:"d-block"%>
+                        </div>
+                      <% end %>
+                    </div>
+                    <a class="carousel-control-prev" href=".carouselIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href=".carouselIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          <% end %>user.
+          <% end %>
       </div>
     </div>
   </div>
