@@ -20,6 +20,6 @@ class PartnersController < ApplicationController
   private
 
   def partner_params
-    params.require(:partner).permit(:street_name_and_number, :postal_code, :city, :country, :message)
+    params.require(:partner).permit(:street_name_and_number, :postal_code, :city, :country, :message, :photo1, :photo2, :photo3)
   end
 end

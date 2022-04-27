@@ -1,10 +1,10 @@
 
 
 <% if current_user.owner == false %>
-  <div class="headers">
-    <h1 class="header-index-booking"><strong>My bookings</strong></h1>
-  </div>
   <% if @bookings.any? %>
+  <div class="headers">
+    <h1 class="header-index-booking light-blue"><strong>My Bookings</strong></h1>
+  </div>
     <div class="container">
       <div class='cards-booking-client'>
         <div class="row">
@@ -29,7 +29,46 @@
       </div>
     </div>
   <% else %>
-    <h4 class="header-index-booking">You haven't booked any screens yet!</h4>
+  <div class="headers">
+    <h1 class="light-blue mt-5" style="margin-left: 165px"><strong>My Bookings</strong></h1>
+  </div>
+    <h4 class="mt-5 mb-5" style="margin-left: 165px">You haven't booked any screens yet! Here is how it works step by step</h4>
+
+    <div class="question-container">
+
+      <div class="instruction-1-home-booking">
+        <div class="col-md-7" >
+          <h1 class="light-blue"><strong>1.</strong></h1>
+          <h3>Choose one or many screen of your liking at your preferred location <%= link_to "here", listings_path, class:"btn-home-here", role:"button" %></h3>
+        </div>
+      </div>
+
+      <div class="instruction-2-home-booking">
+        <div class="col-md-7">
+          <h1 class="light-blue"><strong>2.</strong></h1>
+          <h3>Decide from when to when your want your ads to run. You can later extend the duration by simply writing us an email</h3>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="question-container">
+
+      <div class="instruction-1-home-booking">
+        <div class="col-md-7" >
+          <h1 class="light-blue"><strong>3.</strong></h1>
+          <h3>Upload your advertisement video or picture with 2 clicks where indicated and finish your booking request. Now you have to wait for our approval (aprox. 6h)</h3>
+        </div>
+      </div>
+
+      <div class="instruction-2-home-booking mb-5">
+        <div class="col-md-7">
+          <h1 class="light-blue"><strong>4.</strong></h1>
+          <h3>When approved simply pay through pushing the button that will appear under your request <%= link_to "here", bookings_path, class:"btn-home-here", role:"button" %> and see your advertisements up and running in a given location</h3>
+        </div>
+      </div>
+
+    </div>
   <% end %>
 
 <% end %>

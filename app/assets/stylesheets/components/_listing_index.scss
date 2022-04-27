@@ -1,6 +1,4 @@
-.listings-index-body {
-    background-color: #0c0c0f;
-  }
+
 
 .right-container-index {
   padding-top: 100px;
@@ -104,16 +102,7 @@
 
 
 @media (max-width:844px){
-  .listings-index-main {
-      top: 0;
-      bottom: 0;
-      background-color: rgb(230, 230, 230);
-      width: 100%;
-      position: relative;
-      z-index: 2;
-      border-top: 1px solid #fff;
-      text-align: center;
-  }
+
 
     #map {
     height: 350px;
@@ -135,15 +124,6 @@
     display: flex;
     margin-top: -100px;
   }
-  .listings-index-main {
-      top: 0px;
-      margin-bottom: -250px;
-      background-color: #0e0e0f;
-      width: 100%;
-      position: relative;
-      z-index: 2;
-      border-top: 1px solid #fff;
-      text-align: center;
   }
   #map {
     height: 100vh;
@@ -157,22 +137,12 @@
   .mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
   margin-top: 110px;
 }
-}
+
 
 
 @media (width: 1024px) {
   .container-index-listing {
     display: flex;
-  }
-  .listings-index-main {
-      top: 0;
-      margin-bottom: -50px;
-      background-color: #0C0C0E;
-      width: 100%;
-      position: relative;
-      z-index: 2;
-      border-top: 1px solid #fff;
-      text-align: center;
   }
   #map {
     height: 100vh;

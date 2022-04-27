@@ -14,4 +14,5 @@ class User < ApplicationRecord
   validates :zip, presence: true
   validates :phone, presence: true
   validates :owner, presence: false
+  validates :terms_accepted, acceptance: true
 end
