@@ -24,7 +24,7 @@
   .footer-socialmedia a {
     color: #fff;
     text-decoration: none;
-    font-size: 35px;
+    font-size: 32px;
     padding: 0px 10px;
   }
 
@@ -93,16 +93,18 @@
   .footer-socialmedia {
     display: flex;
     align-items: center;
+
   }
+
   .footer-socialmedia a {
-    color: rgb(255, 255, 255);
-    opacity: 0.7;
+    color: #fff;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 32px;
     padding: 0px 10px;
   }
+
   .footer-socialmedia a:hover {
-    opacity: 1;
+    color: #86ddff;
   }
 
   .footer-box-1 {
