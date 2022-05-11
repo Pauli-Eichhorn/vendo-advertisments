@@ -14,6 +14,9 @@
                 <h5 class="card-booking-title"><%= booking.user.first_name %> <%= booking.user.last_name %></p></h5>
                 <p class="card-booking-text">Starts on: <%= booking.start_date %></p>
                 <p class="card-booking-text">Ends on: <%= booking.end_date %></p>
+                <% if booking.campagne == true %>
+                  <p class="light-blue">You have requested to get a Advertsing Campagne made by <span class="light-blue">Vendo Advertisements</span></p>
+                <% end %>
                 <% if booking.status == "accepted" %>
                   <div class="text-center">
                     <span class="badge badge-success mb-3"><%= booking.status %></span>
@@ -89,6 +92,12 @@
             <div class="col ">
               <div class="card-booking" id="booking-<%= request.id %>">
                 <h5 class="card-booking-title text-center"> <%= request.listing.name %></p></h5>
+                <% if request.photo.present? %>
+                  <%=  cl_image_tag request.photo.key, crop: :fill, style:'width:100%; height:300px' %>
+                <% end %>
+                <% if request.video.present? %>
+                  <%= video_tag(url_for(request.video), crop: :fill, style:'width:100%; height:300px', controls: '' ) %>
+                <% end %>
                 <p class="card-booking-title"><strong>Location: </strong> <%= request.listing.location %></p>
                 <p class="card-booking-text"><strong>Starting Date: </strong><%= request.start_date %></p>
                 <p class="card-booking-text"><strong>Ending Date: </strong><%= request.end_date %></p>
@@ -97,9 +106,13 @@
                 <p class="card-booking-text"><strong>Phone: </strong><%= request.user.phone %></p>
                 <p class="card-booking-text"><strong>Clients Adress: </strong><%= request.user.address%></p>
                 <p class="card-booking-text mb-3"><strong>Status: </strong><%= request.status %></p>
+                <% if request.campagne == true %>
+                  <p class="alert-color">This Customer needs an advertsing campagne!</p>
+                <% end %>
                 <div class="text-center">
                   <%= link_to "Accept", accept_path(booking_id: request.id), method: :patch, class:"btn btn-accept", data: {confirm: "Are you sure you want to accept?"} %>
                   <%= link_to "Reject", reject_path(booking_id: request.id), method: :patch, class:"btn btn-reject", data: {confirm: "Are you sure you want to reject?"}%>
+                  <%= link_to "Delete", booking_path(request), class:"button-28 m-1", method: :delete, data: {confirm: "Are you sure?"}  %>
                 </div>
               </div>
             </div>
