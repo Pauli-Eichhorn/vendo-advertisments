@@ -1,0 +1,110 @@
+
+//Title
+.Title-work{
+  position: absolute;
+  top: 300;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  font-size: 50px;
+}
+
+// main container
+
+.main-container-work {
+    margin-top: 178;
+    padding-bottom: 150px;
+    background-color: #0C0C0E;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid #fff;
+    padding-left: 150px;
+}
+
+//first box
+
+.work-text-1 {
+  color: #fff;
+  margin-top: 150px;
+  text-align: left;
+  width: 100%;
+}
+
+.vendo-logo-work {
+  height: 200px;
+  width: 152px;
+}
+
+.vendo-logo-work img {
+  height: 200px;
+  width: 200px;
+  margin-top: -50px;
+  margin-left: -32px;
+}
+
+.box-1-work {
+    color: #fff;
+    text-align: left;
+    padding: 15;
+}
+.box-1-work img {
+  height: 170px;
+  width: 170px;
+  margin-left: -46px;
+  margin-right: -30px;
+  padding-top: 2px;
+}
+
+//second box
+
+.box-2-work {
+  margin-top: 150px;
+  padding: 15;
+}
+
+//background image
+
+.header-work {
+  color: #fff;
+  box-sizing: border-box;
+  min-height: 40vw;
+  padding: 30vw 0 5vw;
+  position: relative;
+  -webkit-transform-style: inherit;
+  transform-style: inherit;
+  width: 100vw;
+}
+
+.header-work,
+.header-work:before {
+  background: 50% 50% / cover;
+}
+
+.header-work::before {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  flex-grow: 1;
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(image_path('final-work-image.png'));
+  background-size: cover;
+  -webkit-transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+
+.header-work * {
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 0.2em 0;
+}

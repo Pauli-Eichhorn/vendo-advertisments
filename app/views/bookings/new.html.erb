@@ -6,6 +6,12 @@
           <%= simple_form_for [@listing, @booking] do |f| %>
             <%= f.input :start_date %>
             <%= f.input :end_date %>
+            <%= label_tag("If you have a advertising picture upload it here:") %>
+            <%= f.input :photo, as: :file, label: false, wrapper_html: { class: "text-center" }, input_html: { class: "d-inline" } %>
+            <%= label_tag("If you have a advertising video upload it here:") %>
+            <%= f.input :video, as: :file, label: false, wrapper_html: { class: "text-center" }, input_html: { class: "d-inline" } %>
+            <%= f.check_box :campagne %>
+            <%= label_tag("If you need an Advertising Campaign please tick this box") %>
             <div class="form-actions">
               <%= f.button :submit, "Create booking", class:"button-28" %>
             </div>

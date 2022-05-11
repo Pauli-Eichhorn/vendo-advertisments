@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :listings do
     resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [:index]
+  resources :bookings, only: [:index, :destroy]
 
   get "about-us", to: 'pages#aboutus', as: :aboutus
   get "faq", to: 'pages#faq', as: :faq

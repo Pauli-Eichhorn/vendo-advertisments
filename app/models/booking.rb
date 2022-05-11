@@ -2,6 +2,8 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :listing
   validate :not_past_start_date
+  has_one_attached :photo
+  has_one_attached :video
 
   def not_past_start_date
     if self.start_date < Date.today + 2

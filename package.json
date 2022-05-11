@@ -8,6 +8,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.3",
     "bootstrap": "4.6",
+    "cookies-eu-banner": "^2.0.1",
     "jquery": "^3.6.0",
     "mapbox": "^1.0.0-beta10",
     "mapbox-gl": "^2.6.1",

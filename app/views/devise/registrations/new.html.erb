@@ -57,7 +57,7 @@
 
       <%= f.check_box :terms_accepted,
                       required: true%>
-      <%= label_tag(:owner, "I accept all terms and conditions by checking this box ") %>
+      <%= label_tag("I accept all terms and conditions by checking this box ") %>
       <%= f.input :password,
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
