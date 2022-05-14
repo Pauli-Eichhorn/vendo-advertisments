@@ -8,11 +8,12 @@
   text-align: center;
   z-index: 1;
   font-size: 50px;
+  text-shadow: 0 0 5px rgb(40, 40, 40);
 }
 
 // main container
 
-.main-container-work {
+.main-container-work-1 {
     margin-top: 178;
     padding-bottom: 150px;
     background-color: #0C0C0E;
@@ -22,6 +23,7 @@
     border-top: 1px solid #fff;
     padding-left: 150px;
 }
+
 
 //first box
 
@@ -64,6 +66,57 @@
   padding: 15;
 }
 
+
+// screens
+.img-simply {
+  border: white 1px solid;
+  padding:15px;
+}
+
+.box-screen-start {
+  display: flex;
+}
+
+.work-text-screen {
+  color: #fff;
+  margin-top: 200px;
+  text-align: left;
+  width: 100%;
+}
+
+.vendo-logo-work-2 {
+  height: 200px;
+  width: 152px;
+}
+
+.vendo-logo-work-2 img {
+  height: 200px;
+  width: 200px;
+  margin-top: -50px;
+  margin-left: -18px;
+}
+
+.box-3-work {
+  margin-top: 50px;
+  padding: 15;
+}
+
+
+
+.box-4-work {
+  margin-top: 50px;
+}
+
+
+.bottom-box-work {
+  border: 1px solid #fff;
+  width:700px;
+  height: auto;
+  margin-bottom: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
 //background image
 
 .header-work {

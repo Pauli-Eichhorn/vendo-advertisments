@@ -15,6 +15,9 @@
 
           <% if current_user.owner == true %>
               <li>
+                <h5 class="h5-navbar"><%= link_to "Work", "/work", class: "nav-link" %></h5>
+              </li>
+              <li>
                 <h5 class="h5-navbar"><%= link_to "Home", "/", class: "nav-link" %></h5>
               </li>
               <li>
@@ -38,6 +41,10 @@
                 <h5 class="h5-navbar"><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link"%></h5>
               </li>
           <% elsif %>
+            <li>
+              <h5 class="h5-navbar"><%= link_to "WORK", "/work", class: "nav-link" %></h5>
+            </li>
+
             <li>
               <h5 class="h5-navbar"><%= link_to "HOME", "/", class: "nav-link" %></h5>
             </li>
