@@ -1,5 +1,6 @@
 //general
 
+
 html {
   height: 100%;
   overflow: hidden;
@@ -25,33 +26,45 @@ body {
   color: #97ECFF;
 }
 
-@media (max-width:550px) {
-  .home-main {
-    margin-top: 500;
-    background-color: #0C0C0E;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-    border-top: 1px solid #fff;
-    text-align: center;
-    margin-bottom: 150px;
-  }
+.home-main {
+  margin-bottom: 150px;
+  background-color: #0C0C0E;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #fff;
+  text-align: center;
 }
-
-
 @media (min-width:550px) {
   .home-main {
-    margin-top: 250;
-    margin-bottom: 150px;
-    background-color: #0C0C0E;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-    border-top: 1px solid #fff;
-    text-align: center;
     padding-left: 150px;
   }
 }
+
+@media (min-width:1150px) {
+  .home-main {
+    margin-top: 178px;
+  }
+}
+
+@media (min-width:850px) and (max-width:1150px) {
+  .home-main {
+    margin-top: 300px;
+  }
+}
+
+@media (min-width:550px) and (max-width:850px) {
+  .home-main {
+    margin-top: 450px;
+  }
+}
+
+@media (max-width:550px) {
+  .home-main {
+    margin-top: 600px;
+  }
+}
+
 
 /* Fade in right */
 .fadeInRight {
