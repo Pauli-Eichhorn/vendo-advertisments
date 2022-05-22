@@ -34,7 +34,10 @@
   .h5-navbar {
     font-size: 16.5px;
   }
-  .flex-box-nav { display: flex;}
+  .flex-box-nav {
+    border-bottom: #fff solid 1px;
+    display: flex;
+  }
   .navbar {
     padding: 0;
   }
@@ -102,6 +105,12 @@
   color: #fff;
   text-align: center;
   margin-top: 14px;
+}
+
+@media (max-width:992px) {
+  .nav-link {
+    font-size: large;
+  }
 }
 
 .nav-link:hover {

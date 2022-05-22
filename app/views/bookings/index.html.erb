@@ -8,7 +8,7 @@
     <div class="container">
       <div class='cards-booking-client'>
         <div class="row">
-          <% @bookings.each do |booking| %>
+          <% @bookings.reverse.each do |booking| %>
             <div class="col">
               <div class="card-booking-client">
                 <h5 class="card-booking-title"><%= booking.user.first_name %> <%= booking.user.last_name %></p></h5>
@@ -88,7 +88,7 @@
     <div class='cards-booking'>
       <div class="row">
         <% if @my_bookings %>
-          <% @my_bookings.each do |request| %>
+          <% @my_bookings.reverse.each do |request| %>
             <div class="col ">
               <div class="card-booking" id="booking-<%= request.id %>">
                 <h5 class="card-booking-title text-center"> <%= request.listing.name %></p></h5>
