@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get "faq", to: 'pages#faq', as: :faq
   get "work", to: 'pages#work', as: :work
   get "contact", to: 'pages#contact', as: :contact
+  get "policy", to: 'pages#policy', as: :policy
+
 
   resources :partners, only: [:index, :new, :create, :destroy]
 
