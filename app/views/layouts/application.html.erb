@@ -4,7 +4,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vendo Advertisments</title>
+    <title><%= meta_title %></title>
+    <meta name="description" content="<%= meta_description %>">
+
+
+    <%= favicon_link_tag asset_path('favicon.ico') %>
+
+
+    <link href="/assets/favicon.ico" rel="icon" type="image/ico" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
