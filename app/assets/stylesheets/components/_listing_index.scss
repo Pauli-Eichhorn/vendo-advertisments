@@ -102,19 +102,17 @@
 
 
 @media (max-width:844px){
-
-
-    #map {
+  #map {
     height: 350px;
     width:100%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border-bottom: 1px solid #fff;
   }
 
-  .right-container-index {
-  padding-top: 35px;
-  background-color: #0c0c0f;
-}
-
+    .right-container-index {
+    padding-top: 35px;
+    background-color: #0c0c0f;
+  }
 }
 
 
@@ -123,7 +121,6 @@
   .container-index-listing {
     display: flex;
     margin-top: -100px;
-  }
   }
   #map {
     height: 100vh;
@@ -136,8 +133,8 @@
   }
   .mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
   margin-top: 110px;
+  }
 }
-
 
 
 @media (width: 1024px) {

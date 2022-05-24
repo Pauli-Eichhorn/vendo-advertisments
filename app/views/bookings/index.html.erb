@@ -14,6 +14,10 @@
                 <h5 class="card-booking-title"><%= booking.user.first_name %> <%= booking.user.last_name %></p></h5>
                 <p class="card-booking-text">Starts on: <%= booking.start_date %></p>
                 <p class="card-booking-text">Ends on: <%= booking.end_date %></p>
+                <p class="card-booking-text"><strong>Days booked: </strong><%= (booking.end_date - booking.start_date).to_i + 1%> days</p>
+                <p class="card-booking-text"><strong>Price per day: </strong><%= booking.listing.price %>￡</p>
+
+                <p class="card-booking-text"><strong>Total: </strong><%= ((booking.end_date - booking.start_date).to_i + 1) *booking.listing.price %>￡</p>
                 <% if booking.campagne == true %>
                   <p class="light-blue">You have requested to get a Advertsing Campagne made by <span class="light-blue">Vendo Advertisements</span></p>
                 <% end %>
@@ -101,6 +105,8 @@
                 <p class="card-booking-title"><strong>Location: </strong> <%= request.listing.location %></p>
                 <p class="card-booking-text"><strong>Starting Date: </strong><%= request.start_date %></p>
                 <p class="card-booking-text"><strong>Ending Date: </strong><%= request.end_date %></p>
+                <p class="card-booking-text"><strong>Price per day: </strong><%= request.listing.price %>￡</p>
+                <p class="card-booking-text"><strong>Total: </strong><%= ((request.end_date - request.start_date).to_i + 1) *request.listing.price %>￡</p>
                 <p class="card-booking-text"><strong>Booked by: </strong><%= request.user.first_name + " " + request.user.last_name %></p>
                 <p class="card-booking-text"><strong>Email: </strong><%= request.user.email %></p>
                 <p class="card-booking-text"><strong>Phone: </strong><%= request.user.phone %></p>

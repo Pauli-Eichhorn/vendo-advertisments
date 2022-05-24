@@ -73,6 +73,19 @@
 
         <% else %>
           <li>
+            <h5 class="h5-navbar"><%= link_to "Work", "/work", class: "nav-link" %></h5>
+          </li>
+
+          <li>
+            <h5 class="h5-navbar"><%= link_to "Home", "/", class: "nav-link" %></h5>
+          </li>
+          <li>
+              <h5 class="h5-navbar"><%= link_to "Email Us", "mailto:vendoadvertisements@gmail.com?subject=Getting in touch", class: "nav-link" %></h5>
+          </li>
+          <li>
+            <h5 class="h5-navbar"><%= link_to "Contact Us", "/contact", class: "nav-link" %></h5>
+          </li>
+          <li>
             <h5><%= link_to "Login", new_user_session_path, class: "nav-link"%></h5>
           </li>
         <% end %>
