@@ -11,7 +11,67 @@
   text-shadow: 0 0 5px rgb(40, 40, 40);
 }
 
-// main container
+//chapter slogan
+
+
+@media (min-width:900px) {
+  .chapter-slogan {
+      display: flex !important;
+    }
+
+  .vendo-logo-work img {
+    height: 200px;
+    width: 200px;
+    margin-top: -50px;
+    margin-left: -32px;
+  }
+  .vendo-logo-work-2 {
+    height: 200px;
+    width: 152px;
+  }
+
+  .vendo-logo-work-2 img {
+    height: 200px;
+    width: 200px;
+    margin-top: -50px;
+    margin-left: -18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .chapter-slogan {
+      text-align: center;
+      margin-bottom: 50px;
+  }
+
+  .vendo-logo-work img {
+    height: 200px;
+    width: 200px;
+    margin-left: -24px;
+  }
+
+  .vendo-logo-work {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .chapter-slogan-2 {
+    text-align: center;
+  }
+
+  .vendo-logo-work-2 img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .vendo-logo-work-2 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+
+
 
 .main-container-work-1 {
     padding-bottom: 150px;
@@ -33,9 +93,12 @@
     align-items: center;
   }
   .center-text-work {
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    text-align: center !important;
   }
+
+
 }
 
 
@@ -60,6 +123,11 @@
     margin-top: 600px;
   }
 }
+@media (width:375px) {
+  .main-container-work-1 {
+    margin-top: 500px;
+  }
+}
 
 //first box
 
@@ -75,12 +143,6 @@
   width: 152px;
 }
 
-.vendo-logo-work img {
-  height: 200px;
-  width: 200px;
-  margin-top: -50px;
-  margin-left: -32px;
-}
 
 .box-1-work {
     color: #fff;
@@ -120,17 +182,7 @@
   width: 100%;
 }
 
-.vendo-logo-work-2 {
-  height: 200px;
-  width: 152px;
-}
 
-.vendo-logo-work-2 img {
-  height: 200px;
-  width: 200px;
-  margin-top: -50px;
-  margin-left: -18px;
-}
 
 .box-3-work {
   margin-top: 50px;
@@ -146,12 +198,12 @@
 
 .bottom-box-work {
   border: 1px solid #fff;
-  width:700px;
   height: auto;
   margin-bottom: 150px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
+
 }
 //background image
 
