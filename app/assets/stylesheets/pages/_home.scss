@@ -99,6 +99,11 @@ body {
   }
 }
 
+@media (width:375px) {
+  .home-main {
+    margin-top: 500px;
+  }
+}
 
 /* Fade in right */
 .fadeInRight {
