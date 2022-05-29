@@ -21,11 +21,21 @@
                 <% if booking.campagne == true %>
                   <p class="light-blue">You have requested to get a Advertsing Campagne made by <span class="light-blue">Vendo Advertisements</span></p>
                 <% end %>
+
                 <% if booking.status == "accepted" %>
-                  <div class="text-center">
-                    <span class="badge badge-success mb-3"><%= booking.status %></span>
-                    <%= button_to "Pay Now", checkout_create_path, params: {listing_id: booking.listing.id, id: booking.id}, remote: true, class:"pay-btn" %>
-                  </div>
+
+                  <% if booking.paid == false %>
+                    <p>Payment Status: Not Paid</p>
+                    <div class="text-center">
+                      <span class="badge badge-success mb-3"><%= booking.status %></span>
+                      <%= button_to "Pay Now", checkout_create_path, params: {listing_id: booking.listing.id, id: booking.id}, remote: true, class:"pay-btn" %>
+                    </div>
+                  <% end %>
+
+                  <% if booking.paid == true %>
+                    <p>Payment Status: Paid</p>
+                  <% end %>
+
                 <% else %>
                   <span class="badge badge-secondary"><%= booking.status %></span>
                 <% end %>
@@ -112,6 +122,15 @@
                 <p class="card-booking-text"><strong>Phone: </strong><%= request.user.phone %></p>
                 <p class="card-booking-text"><strong>Clients Adress: </strong><%= request.user.address%></p>
                 <p class="card-booking-text mb-3"><strong>Status: </strong><%= request.status %></p>
+
+                <% if request.paid == false %>
+                  <p>Payment Status: Not Paid</p>
+                <% end %>
+
+                <% if request.paid == true %>
+                  <p>Payment Status: Paid</p>
+                <% end %>
+
                 <% if request.campagne == true %>
                   <p class="alert-color">This Customer needs an advertsing campagne!</p>
                 <% end %>

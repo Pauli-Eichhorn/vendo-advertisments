@@ -12,7 +12,7 @@ User.destroy_all
 
 puts 'everything destroyed'
 
-user1 = User.create!(email: "vendoadvertisements@gmail.com", password: "21Vend0@$$$", first_name: "Vendo", last_name: "Advertisements", address: "Bewdley DY12 1LN", owner: true, country: "England", city:"Bewdley", zip:"DY12 1LN", phone:"07904797117", terms_accepted: true)
+user1 = User.create!(email: "info@vendo-adv.com", password: "21Vend0@$$$", first_name: "Vendo", last_name: "Advertisements", address: "Bewdley DY12 1LN", owner: true, country: "England", city:"Bewdley", zip:"DY12 1LN", phone:"07904797117", terms_accepted: true)
 user2 = User.create!(email: "user2@gmail.com", password: "12345678", first_name: "Carl", address: "Goltsteinstr. 150 50968 Cologne", last_name: "Schierstädt", owner: false, country: "Germany", city:"Cologne", zip:"50968", phone:"07904797117", terms_accepted: true)
 
 puts 'user created'
