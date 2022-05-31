@@ -1,0 +1,18 @@
+[Warning] You are loading Turbolinks from a <script> element inside the <body> element. This is probably not what you meant to do! (application-8d219eb64a05bcfb841b.js, line 26107)
+
+Load your application’s JavaScript bundle inside the <head> element instead. <script> elements in <body> are evaluated with each page change.
+
+For more information, see: https://github.com/turbolinks/turbolinks#working-with-script-elements
+
+——
+Suppress this warning by adding a `data-turbolinks-suppress-warning` attribute to: <script src="/packs/js/application-8d219eb64a05bcfb841b.js" data-turbolinks-track="reload" defer="defer"></script>
+[Error] Failed to load resource: the server responded with a status of 500 (Internal Server Error) (create, line 0)
+[Error] Failed to load resource: the server responded with a status of 500 (Internal Server Error) (create, line 0)
+[Error] Failed to load resource: the server responded with a status of 500 (Internal Server Error) (create, line 0)
+[Error] Failed to load resource: the server responded with a status of 500 (Internal Server Error) (create, line 0)
+[Error] Failed to load resource: the server responded with a status of 500 (Internal Server Error) (create, line 0)
+[Error] Failed to load resource: the server responded with a status of 500 (Internal Server Error) (create, line 0)
+[Error] Failed to load resource: the server responded with a status of 500 (Internal Server Error) (create, line 0)
+[Error] Failed to load resource: the server responded with a status of 500 (Internal Server Error) (create, line 0)
+> Selected Element
+< <div class="col">…</div>
