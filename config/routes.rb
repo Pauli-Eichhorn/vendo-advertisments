@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "work", to: 'pages#work', as: :work
   get "contact", to: 'pages#contact', as: :contact
   get "policy", to: 'pages#policy', as: :policy
+  get "success", to: 'pages#success', as: :success
 
   resources :partners, only: [:index, :new, :create, :destroy]
 
