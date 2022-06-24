@@ -15,4 +15,13 @@ class User < ApplicationRecord
   validates :phone, presence: true
   validates :owner, presence: false
   validates :terms_accepted, acceptance: true
+
+  def to_s
+    email
+  end
+
+  after_create do
+    customer = Stripe::Customer.create(email: email)
+    update(stripe_customer_id: customer.id)
+  end
 end

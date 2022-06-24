@@ -28,7 +28,7 @@
                     <p>Payment Status: Not Paid</p>
                     <div class="text-center">
                       <span class="badge badge-success mb-3"><%= booking.status %></span>
-                      <%= button_to "Pay Now", checkout_create_path, params: {listing_id: booking.listing.id, id: booking.id}, remote: true, class:"pay-btn" %>
+                      <%= button_to "Pay Now", checkout_create_path, params: {listing_id: booking.listing.id, id: booking.id}, remote: true, class:"pay-btn", data:{disable_with: "..."} %>
                     </div>
                   <% end %>
 

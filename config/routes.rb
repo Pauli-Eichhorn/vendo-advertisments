@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   get "contact", to: 'pages#contact', as: :contact
   get "policy", to: 'pages#policy', as: :policy
 
-
   resources :partners, only: [:index, :new, :create, :destroy]
 
   patch "accept", to: 'bookings#accept', as: :accept
@@ -20,4 +19,7 @@ Rails.application.routes.draw do
 
   resources :checkout, only: [:create]
   post "checkout/create", to: "checkout#create"
+
+  resources :webhooks, only: [:create]
+
 end
