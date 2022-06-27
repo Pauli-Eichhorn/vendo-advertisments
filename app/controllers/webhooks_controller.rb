@@ -24,10 +24,9 @@ class WebhooksController < ApplicationController
     # Handle the event
     case event.type
     when 'checkout.session.completed'
-      # session = event.data.object
-      # @booking.session.client_reference_id.paid = true
       booking = Booking.find_by(checkout_session_id: event.data.object.id)
       booking.update(paid: true)
+      booking.save
     end
 
     render json: { message: 'success' }
