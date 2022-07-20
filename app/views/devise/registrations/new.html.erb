@@ -1,79 +1,86 @@
-<div class='signup-box col-11 col-lg-6'>
-  <div class='login-text text-center '>
-    <h2>Sign Up For Free</h2>
+<body class="signup-body">
+  <div class='signup-box col-11 col-lg-6'>
+    <div class='login-text text-center '>
+      <h2>Sign Up For Free</h2>
+    </div>
+
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-inputs">
+        <div class="d-flex">
+          <div class="mr-2">
+            <%= f.input :first_name,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "first-name" }%>
+          </div>
+          <div class="ml-2">
+            <%= f.input :last_name,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "last-name" }%>
+          </div>
+        </div>
+
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" }%>
+        <%= f.input :phone,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "phone" }%>
+        <%= f.input :address,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "address" }%>
+
+        <div class="d-flex">
+          <div class="mr-2">
+            <%= f.input :city,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "city" }%>
+          </div>
+          <div class="mr-2">
+            <%= f.input :zip,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "zip" } %>
+          </div>
+          <div >
+            <%= f.input :country,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "country" } %>
+          </div>
+        </div>
+
+        <%= f.check_box :terms_accepted,
+                        required: true%>
+        <%= label_tag("I accept all terms and conditions by checking this box ") %>
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
+      </div>
+
+
+      <div class="form-actions-btn text-center">
+        <%= f.button :submit, "sign up", id:'btn-signup' %>
+      </div>
+    <% end %>
   </div>
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
-    <div class="form-inputs">
-      <div class="d-flex">
-        <div class="mr-2">
-          <%= f.input :first_name,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "first-name" }%>
-        </div>
-        <div class="ml-2">
-          <%= f.input :last_name,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "last-name" }%>
-        </div>
-      </div>
-
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :phone,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "phone" }%>
-      <%= f.input :address,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "address" }%>
-
-      <div class="d-flex">
-        <div class="mr-2">
-          <%= f.input :city,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "city" }%>
-        </div>
-        <div class="mr-2">
-          <%= f.input :zip,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "zip" } %>
-        </div>
-        <div >
-          <%= f.input :country,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "country" } %>
-        </div>
-      </div>
-
-      <%= f.check_box :terms_accepted,
-                      required: true%>
-      <%= label_tag("I accept all terms and conditions by checking this box ") %>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
+  <div class="login-links text-center col-6 col-lg-3">
+    <div class="mt-3">
+      <%= link_to "Login", "/users/sign_in", class: "login-link" %>
     </div>
-
-
-    <div class="form-actions-btn text-center">
-      <%= f.button :submit, "sign up", id:'btn-signup' %>
+    <div class="mt-2 mb-3">
+      <%= link_to "Forgot Password?", "/users/password/new", class: "login-link" %>
     </div>
-  <% end %>
-</div>
-
-<div class="text-center mt-5 mb-5">
-  <%= render "devise/shared/links" %>
-</div>
+  </div>
+</body>

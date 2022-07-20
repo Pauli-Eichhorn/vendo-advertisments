@@ -6,7 +6,32 @@
   background-color: #238ddf;
   display: inline-block;
   margin-bottom: 20px;
+  border: 1px solid white;
 }
+
+.login-links {
+  background-color: rgb(15, 15, 15);
+  border: 1px solid white;
+  border-radius: 50px;
+  margin-bottom: 75px;
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-link {
+  font-size: large;
+  color: white;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  color: #86ddff;
+  text-decoration: underline;
+}
+
+
+
 
 .login-button:hover {
   color: #fff;
@@ -24,9 +49,14 @@
 
 // sign up
 
+.signup-body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(image_path('screen-1.jpg'));
+}
+
 .signup-box {
   border-radius: 15px;
   background-color: rgb(15, 15, 15);
+  border: 1px solid white;
   color: #fff;
   text-decoration: none;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
