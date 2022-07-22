@@ -1,22 +1,24 @@
-<div class="booking-container">
+<body class="signup-body">
   <div class="row justify-content-center align-items-center">
     <div class="col">
-      <div class="booking-card p-5 mt-5">
-        <h1>Create a new booking!</h1>
+      <div class="booking-card pt-5 pr-5 pl-5 pb-3 mt-5 mb-5 ml-5 mr-5">
+        <h1 class="text-center">Create a new booking!</h1>
           <%= simple_form_for [@listing, @booking] do |f| %>
-            <%= f.input :start_date %>
-            <%= f.input :end_date %>
-            <%= label_tag("If you have a advertising picture upload it here:") %>
-            <%= f.input :photo, as: :file, label: false, wrapper_html: { class: "text-center" }, input_html: { class: "d-inline" } %>
-            <%= label_tag("If you have a advertising video upload it here:") %>
-            <%= f.input :video, as: :file, label: false, wrapper_html: { class: "text-center" }, input_html: { class: "d-inline" } %>
+            <h5><%= f.input :start_date %></h5>
+            <h5><%= f.input :end_date %></h5>
+            <h5><%= label_tag("If you have a advertising video upload it here:") %><h5>
+            <h6><%= f.input :video, as: :file, label: false, input_html: { class: "file-upload col-4" } %></h6>
+            <h5><%= label_tag("If you have a advertising picture upload it here:") %></h5>
+            <h6><%= f.input :photo, as: :file, label: false, input_html: { class: "file-upload col-4" } %></h6>
+            <div class="checkbox col-12 col-xl-7 d-flex">
             <%= f.check_box :campagne %>
-            <%= label_tag("If you need an Advertising Campaign please tick this box") %>
-            <div class="form-actions">
-              <%= f.button :submit, "Create booking", class:"button-28" %>
+            <h5 class="checkbox-text"><%= label_tag("If you need an Advertising Campaign please tick this box") %></h5>
+            </div>
+            <div class="form-actions col-8 mx-auto">
+              <%= f.button :submit, "Create booking", class:"button-28 mt-5" %>
             </div>
           <% end %>
       </div>
     </div>
   </div>
-</div>
+</body>
