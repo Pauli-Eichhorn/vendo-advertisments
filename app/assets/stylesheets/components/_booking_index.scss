@@ -25,6 +25,22 @@
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #000;
+}
+
+.card-booking-paid {
+  border-radius: 15px;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  border: 2px solid rgb(32, 197, 32);
+  width: 320px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000;
 }
 
 .card-booking-client{
@@ -39,6 +55,7 @@
   margin-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #000;
 }
 
 
@@ -111,6 +128,24 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  color: white;
+  background-color: rgb(67, 204, 67);
+  font-size: medium;
+  border-radius: 5px;
+}
+
+.badge-secondary {
+  background-color: red;
+  font-size: medium;
+  border-radius: 5px;
+}
+
+
+.badge-tertiary {
+  background-color: rgb(0, 94, 255);
+  font-size: medium !important;
+  border-radius: 5px !important;
+  color: white;
 }
 
 @media (min-width:649px) {
