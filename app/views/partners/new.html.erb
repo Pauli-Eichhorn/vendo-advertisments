@@ -1,18 +1,68 @@
 
 <body class="body-new-listings signup-body">
-  <div class=" new-listings row justify-content-center my-3 mb-5">
-      <div class="new-listing-container">
-        <%= simple_form_for(@partner) do |f| %>
-          <%= f.input :street_name_and_number, :input_html => { :class => 'partner-input' } %>
-          <%= f.input :postal_code, :input_html => { :class => 'partner-input' } %>
-          <%= f.input :city, :input_html => { :class => 'partner-input' } %>
-          <%= f.input :country, :input_html => { :class => 'partner-input' } %>
-          Photo:
-          <%= f.input :photo1, as: :file, label: false, wrapper_html: { class: "text-center" }, input_html: { class: "d-inline" } %>
-          <%= f.input :photo2, as: :file, label: false, wrapper_html: { class: "text-center" }, input_html: { class: "d-inline" } %>
-          <%= f.input :message, :input_html => { :class => 'partner-input' } %>
-          <%= f.submit "Submit", class: "btn btn-nav w-100 mr-sm-4", data: { confirm: "Are you sure you want to send the partner request?" } %>
-        <% end %>
+
+  <div class="anleitung-partner mb-5 mt-5">
+    <div class="partner-header mt-3">
+      <div class="row">
+        <div class="col-md-9 centering-for-900-partner text-center">
+          <h1 > Becoming a partner</h1>
+          <h1><span class="light-blue"> Here is how it works:</span></h1>
+        </div>
       </div>
+    </div>
+
+
+    <div class="question-container-partner">
+
+      <div class="instruction-1-partner">
+        <div class="col-md-8 centering-for-900-partner" >
+          <h1 class="light-blue"><strong>1.</strong></h1>
+          <h3>You can simply apply to become an advertising partner for Vendo by just filling out the information sheet  on the bottom of this page and submit it.</h3>
+        </div>
+      </div>
+
+      <div class="instruction-2-partner">
+        <div class="col-md-8 centering-for-900-partner">
+          <h1 class="light-blue"><strong>2.</strong></h1>
+          <h3>We need the address of where you plan to offer us a space to put one of our digital signage screens or one of our patented blast-resistant bins.</h3>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="question-container-partner">
+
+      <div class="instruction-1-partner">
+        <div class="col-md-8 centering-for-900-partner" >
+          <h1 class="light-blue"><strong>3.</strong></h1>
+          <h3>After that, you have to send us 1 or 2 pictures of the location i.e. where the Screen/Bin should be placed. You can write us a message to clarify anything about your application.</h3>
+        </div>
+      </div>
+
+      <div class="instruction-2-partner">
+        <div class="col-md-8 centering-for-900-partner">
+          <h1 class="light-blue"><strong>4.</strong></h1>
+          <h3>Reviewing your location takes us about one to two days and we will contact you directly after our review.</h3>
+        </div>
+      </div>
+
+    </div>
+    <div class="new-listings row justify-content-center my-3">
+        <div class="new-partner-container">
+          <h2 class="mb-4">Application Sheet:</h2>
+          <%= simple_form_for(@partner) do |f| %>
+            <%= f.input :street_name_and_number, :input_html => { :class => 'partner-input' } %>
+            <%= f.input :postal_code, :input_html => { :class => 'partner-input' } %>
+            <%= f.input :city, :input_html => { :class => 'partner-input' } %>
+            <%= f.input :country, :input_html => { :class => 'partner-input' } %>
+            Photo:
+            <h6><%= f.input :photo1, as: :file, label: false, input_html: { class: "file-upload col-10" } %></h6>
+            <h6><%= f.input :photo2, as: :file, label: false, input_html: { class: "file-upload col-10" } %></h6>
+            <%= f.input :message, :input_html => { :class => 'partner-input' } %>
+            <%= f.submit "Submit", class: "btn btn-nav w-100 mr-sm-4", data: { confirm: "Are you sure you want to send the partner request?" } %>
+          <% end %>
+        </div>
+    </div>
   </div>
+
 </body>
