@@ -3,6 +3,11 @@ class BookingMailer < ApplicationMailer
     @booking = params[:booking]
     # @user = User.find(params[:id])
 
-    mail(to: "carl.schierstaedt@gmail.com", subject: "You've got a new booking!")
+    mail(
+      from: "info@vendo-adv.com",
+      to: "info@vendo-adv.com",
+      cc: "p.eichhorn@vendo-adv.com",
+      subject: "You've got a new booking!"
+    )
   end
 end
