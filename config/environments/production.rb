@@ -126,7 +126,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'https://www.vendo-adv.com/',
+    domain:               'vendo-adv.com',
     user_name:            Rails.application.credentials.dig(:google_smtp, :email),
     password:             Rails.application.credentials.dig(:google_smtp, :password),
     authentication:       'plain',
