@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'vendoadvertisment@gmail.com'
+  default from: 'info@vendo-adv.com'
   layout 'mailer'
 
   def confirmation_mail
