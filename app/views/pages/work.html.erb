@@ -1,10 +1,8 @@
-<body class="body-work">
+<body class="body-background-work">
 
   <div class="header-work">
-    <div class="row">
-      <div class="Title-work mx-auto">
-        <p>OUR WORK</p>
-      </div>
+    <div class="Title-work">
+      OUR WORK
     </div>
   </div>
 
@@ -95,27 +93,28 @@ The blast-resistant bins also bring with them a practical solution to littering,
     </div>
   </div>
 
-
-  <div class="bottom-box-work col-lg-8 col-10">
-    <div class="box-4-work">
-      <div class="col-md-10 text-center mx-auto">
-        <h1><strong><span class="light-blue">Physical advertising</span> is more important now than ever</strong></h1>
+  <div class="bottom-box-work-around">
+    <div class="bottom-box-work col-lg-8 col-10">
+      <div class="box-4-work">
+        <div class="col-md-10 text-center mx-auto">
+          <h1><strong><span class="light-blue">Physical advertising</span> is more important now than ever</strong></h1>
+        </div>
       </div>
+
+      <% if user_signed_in? %>
+        <div class="center" style="margin-bottom:50px;">
+          <button class="fancy">
+            <a href="/listings" target="_self" class="">See Screens</a>
+          </button>
+        </div>
+      <% else %>
+        <div class="center" style="margin-bottom:50px;">
+          <button class="fancy">
+            <a href="/users/sign_in" target="_self" class="">Get Started</a>
+          </button>
+        </div>
+      <% end %>
+
     </div>
-
-    <% if user_signed_in? %>
-      <div class="center" style="margin-bottom:50px;">
-        <button class="fancy">
-          <a href="/listings" target="_self" class="">See Screens</a>
-        </button>
-      </div>
-    <% else %>
-      <div class="center" style="margin-bottom:50px;">
-        <button class="fancy">
-          <a href="/users/sign_in" target="_self" class="">Get Started</a>
-        </button>
-      </div>
-    <% end %>
-
   </div>
 </body>
