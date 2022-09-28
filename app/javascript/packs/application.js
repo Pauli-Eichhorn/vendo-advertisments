@@ -50,7 +50,7 @@ document.addEventListener('turbolinks:load', () => {
 const observer1 = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      document.querySelectorAll(".animated1").forEach(element => element.classList.add("fadeInTop"))
+      document.querySelectorAll(".animated1").forEach(element => element.classList.add("fadeInBottom"))
     }
   })
 })
@@ -60,7 +60,7 @@ observer1.observe(document.querySelector(".animated1"))
 const observer2 = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      document.querySelectorAll(".animated2").forEach(element => element.classList.add("fadeInTop"))
+      document.querySelectorAll(".animated2").forEach(element => element.classList.add("fadeInBottom"))
     }
   })
 })
@@ -109,7 +109,7 @@ observer6.observe(document.querySelector(".animated6"))
 const observer7 = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      document.querySelectorAll(".animated7").forEach(element => element.classList.add("fadeInTop"))
+      document.querySelectorAll(".animated7").forEach(element => element.classList.add("fadeInBottom"))
     }
   })
 })
