@@ -294,6 +294,71 @@ body {
   }
 }
 
+//Fade in bottom
+
+.fadeInBottom {
+  -webkit-animation: fadeInBottom 1.8s both;
+  /* Safari 4+ */
+  -moz-animation: fadeInBottom 1.8s both;
+  /* Fx 5+ */
+  -o-animation: fadeInBottom 1.8s both;
+  /* Opera 12+ */
+  animation: fadeInBottom 1.8s both;
+  /* IE 10+, Fx 29+ */
+}
+
+
+
+
+
+@-webkit-keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 //First box
 
 .home-text-1 {

@@ -75,7 +75,7 @@
 
 .main-container-work-1 {
     padding-bottom: 150px;
-    background-color: #9d9d9d;
+    background-color: #0c0c0f;
     width: 100%;
     position: relative;
     z-index: 2;
@@ -202,9 +202,15 @@
   margin-bottom: 150px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px;
-
+  border-radius: 20px;
+  background-color: #0c0c0f;
 }
+
+.body-work {
+    background-color: #0c0c0f;
+  }
+
+
 //background image
 
 .header-work {
