@@ -1,38 +1,55 @@
 //Title and background
 
+
+
+.full-container-work {
+  position: relative;
+  top: -100;
+  margin-bottom: -100px;
+}
+
+.main-container-work-1 {
+  padding-bottom: 150px;
+  width: 100%;
+  border-top: 1px solid #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 1;
+}
+
 .header-work {
   background: 50% 50% / cover;
 }
 
 .header-work {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  flex-grow: 1;
   position: sticky;
+  top: 0;
   background-image: url(image_path('final-work-image.png'));
   background-size: cover;
-  z-index: -1;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .Title-work {
-  bottom: 0;
+  position: absolute;
   left: 0;
-  right: 0;
-  top: 0;
+  right:0;
+  top: 300;
+  z-index:10;
   display: flex;
-  position: fixed;
   justify-content: center;
   align-items: center;
-  z-index: 1;
-  height: 100%;
-  width:100%;
+  text-align: center;
   font-size: 50px;
   text-shadow: 0 0 5px rgb(40, 40, 40);
   color: white;
-  z-index: 10;
+}
+
+
+.bottom-box-work-around {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 150px;
 }
 
 //chapter slogan
@@ -94,23 +111,6 @@
   }
 }
 
-
-
-
-.main-container-work-1 {
-    padding-bottom: 150px;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-    border-top: 1px solid #fff;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.body-background-work {
-  background-color: #0c0c0f;
-  z-index: 100000;
-}
-
 @media (min-width:900px) {
   .main-container-work-1 {
     padding-left: 150px;
@@ -134,32 +134,6 @@
 .main-container-work-1 {
   margin-top: 20px;
 }
-
-// @media (min-width:1150px) {
-//   .main-container-work-1 {
-//       margin-top:178px;
-//     }
-// }
-// @media (min-width:850px) and (max-width:1150px) {
-//     .main-container-work-1 {
-//       margin-top: 300px;
-//     }
-// }
-// @media (min-width:550px) and (max-width:850px) {
-//   .main-container-work-1 {
-//     margin-top: 450px;
-//   }
-// }
-// @media (max-width:550px) {
-//   .main-container-work-1 {
-//     margin-top: 600px;
-//   }
-// }
-// @media (width:375px) {
-//   .main-container-work-1 {
-//     margin-top: 500px;
-//   }
-// }
 
 //first box
 
@@ -198,6 +172,7 @@
 
 
 // screens
+
 .img-simply {
   border: white 1px solid;
   padding:15px;
@@ -237,7 +212,18 @@
   background-color: #0c0c0f;
 }
 
-.bottom-box-work-around {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding-bottom: 150px;
+
+
+// ANIMATION
+
+
+.fade-in-work {
+  opacity: 0;
+  transition: opacity 600ms ease-in;
+  line-height: 200px;
+}
+
+.fade-in-work.appear {
+  opacity: 1;
+  line-height: 0px;
 }
