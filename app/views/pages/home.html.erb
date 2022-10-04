@@ -1,29 +1,29 @@
 <body>
   <div class= "full-container-home">
     <div class="header-home"></div>
+    <div class="unoverflotable-container">
+      <div class="Title-home">
+        <h1> VENDO </h1>
+        <h2>Affordable Advertisement Anywhere </h2>
+        <div class="mt-2">
+          <p>A Digital Platform for Advertising</p>
+        </div>
+        <% if user_signed_in? %>
+          <div class="home-title-button-position">
+            <button class="fancy">
+              <a href="/listings" target="_self" class="">See Screens</a>
+            </button>
+          </div>
+        <% else %>
+          <div class="home-title-button-position">
+            <button class="fancy">
+              <a href="/users/sign_in" target="_self" class="">Get Started</a>
+            </button>
+          </div>
+        <% end %>
 
-    <div class="Title-home">
-      <h1>Affordable</h1>
-      <h1>Advertisement</h1>
-      <h1>Anywhere</h1>
-      <div class="mt-2">
-        <h4>A Digital Platform for Advertising</h4>
       </div>
-      <% if user_signed_in? %>
-        <div class="center">
-          <button class="fancy">
-            <a href="/listings" target="_self" class="">See Screens</a>
-          </button>
-        </div>
-      <% else %>
-        <div class="center">
-          <button class="fancy">
-            <a href="/users/sign_in" target="_self" class="">Get Started</a>
-          </button>
-        </div>
-      <% end %>
     </div>
-
 
     <div class="home-main">
     <%# fist box %>

@@ -43,15 +43,134 @@ body {
   animation: fadein 3s;
 }
 
-.title-home {
-  position: absolute;
-  top: 250;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 1;
-  text-shadow: 0 0 5px rgb(40, 40, 40);
+@media (min-width:1050px) {
+  .title-home {
+    position: absolute;
+    top: 250;
+    left: 0;
+    right: 0;
+    text-align: left;
+    z-index: 1;
+    margin-left: 150px;
+  }
+
+  .title-home h1 {
+    font-size: 190px;
+    line-height: 160px;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 1px #fff;
+    background-image: url(image_path('back-animation.png'));
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    }
+
+  @keyframes back {
+    100% {
+      background-position: 2000px 0;
+    }
+
+  }
+
+  .title-home h2 {
+    font-size: 50px;
+    font-weight: 600;
+  }
+
+  .title-home p {
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  .home-title-button-position {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-left: 10px;
+  }
+
 }
+
+@media (max-width:1049px) {
+  .title-home {
+    position: absolute;
+    top: 250;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .title-home h1 {
+    font-size: 190px;
+    line-height: 160px;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 1px #fff;
+    background-image: url(image_path('back-animation.png'));
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+  }
+
+  @keyframes back {
+    100% {
+      background-position: 2000px 0;
+    }
+
+  }
+
+  .title-home h2 {
+    font-size: 50px;
+    font-weight: 600;
+  }
+
+  .title-home p {
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  .home-title-button-position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:500px) and (max-width:800px) {
+  .title-home h1 {
+      font-size: 130px;
+      line-height: 100px;
+  }
+}
+@media (max-width:499px) {
+  .title-home h1 {
+    font-size: 100px;
+    margin-top: -150;
+  }
+
+}
+
+@media (max-height:660px) {
+  .unoverflotable-container {
+    margin-bottom: 200px;
+  }
+}
+
+@media (max-height:450px) {
+  .title-home {
+    margin-top: -100px;
+  }
+}
+
+@media (height:720px) and (width:540px) {
+  .title-home {
+    margin-top: -100px;
+  }
+}
+
+
 
 .header-home {
   background: 50% 50% / cover;
@@ -62,7 +181,7 @@ body {
   top: 0;
   background-size: cover;
   height: 100%;
-  background-image: url(image_path('screen-1.jpg'));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(image_path('screen-1.jpg'));
 }
 
 .full-container-home {
@@ -209,39 +328,6 @@ body {
 
 
 
-
-@media (max-height:600px){
-  .home-main {
-    top: 50;
-    background-color: #0C0C0E;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-    border-top: 1px solid #fff;
-    text-align: center;
-  }
-  .title-home {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index:1000;
-  }
-}
-
-@media (height:568px){
-  .home-main {
-    top: 200;
-    background-color: #0C0C0E;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-    border-top: 1px solid #fff;
-    text-align: center;
-  }
-}
-
 @media (max-width:900px){
   .question-container {
     align-items: center;
@@ -270,16 +356,6 @@ body {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
 
 // This is for the get started
 
