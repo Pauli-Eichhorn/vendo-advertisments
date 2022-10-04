@@ -17,3 +17,19 @@
 .contact-socialmedia a:hover {
   color: #86ddff;
 }
+
+.contact-us-bulletpoint {
+  white-space: nowrap;
+}
+
+.contact-us-box {
+  border: white solid 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-left: 50px;
+  padding-top: 20px;
+}
