@@ -1,4 +1,6 @@
 const faders = document.querySelectorAll(".fade-in-work");
+const slidersLeft = document.querySelectorAll(".slide-in-left");
+const slidersRight = document.querySelectorAll(".slide-in-right");
 
 const appearOptions = {
   threshold: 0,
@@ -22,4 +24,12 @@ const appearOnScroll = new IntersectionObserver(function (
 
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
+});
+
+slidersLeft.forEach(slider => {
+  appearOnScroll.observe(slider);
+});
+
+slidersRight.forEach(slider => {
+  appearOnScroll.observe(slider);
 });
