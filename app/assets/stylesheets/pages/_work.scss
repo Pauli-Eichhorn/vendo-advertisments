@@ -211,19 +211,3 @@
   border-radius: 20px;
   background-color: #0c0c0f;
 }
-
-
-
-// ANIMATION
-
-
-.fade-in-work {
-  opacity: 0;
-  transition: opacity 600ms ease-in;
-  line-height: 200px;
-}
-
-.fade-in-work.appear {
-  opacity: 1;
-  line-height: 0px;
-}

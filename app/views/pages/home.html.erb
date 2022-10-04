@@ -1,177 +1,178 @@
-<header>
-  <div class="head-text">
-    <div class="row">
-      <div class="Title-home mx-auto">
-        <h1>Affordable</h1>
-        <h1>Advertisement</h1>
-        <h1>Anywhere</h1>
-        <div class="mt-2">
-          <h4>A Digital Platform for Advertising</h4>
+<body>
+  <div class= "full-container-home">
+    <div class="header-home"></div>
+
+    <div class="Title-home">
+      <h1>Affordable</h1>
+      <h1>Advertisement</h1>
+      <h1>Anywhere</h1>
+      <div class="mt-2">
+        <h4>A Digital Platform for Advertising</h4>
+      </div>
+      <% if user_signed_in? %>
+        <div class="center">
+          <button class="fancy">
+            <a href="/listings" target="_self" class="">See Screens</a>
+          </button>
         </div>
-        <% if user_signed_in? %>
-          <div class="center">
-            <button class="fancy">
-              <a href="/listings" target="_self" class="">See Screens</a>
-            </button>
+      <% else %>
+        <div class="center">
+          <button class="fancy">
+            <a href="/users/sign_in" target="_self" class="">Get Started</a>
+          </button>
+        </div>
+      <% end %>
+    </div>
+
+
+    <div class="home-main">
+    <%# fist box %>
+
+      <div class="home-text-1 fade-in-work">
+        <div class="row">
+          <div class="col-md-9 centering-for-900 d-flex ">
+            <div class="vendo-logo-home">
+              <%= image_tag "vendo-logo.png"%>
+            </div>
+            <div>
+              <h1>The Future begins</h1>
+              <h1 > with <span class="light-blue"><strong>VENDO</strong></span></h1>
+            </div>
           </div>
-        <% else %>
-          <div class="center">
-            <button class="fancy">
-              <a href="/users/sign_in" target="_self" class="">Get Started</a>
-            </button>
+        </div>
+      </div>
+
+    <%# second box %>
+
+      <div class="question-container ">
+
+        <div class="question-1-home fade-in-work">
+          <div class="col-md-9 centering-for-900" >
+            <h2> Need Advertising?</h2>
+            <h2 class="light-blue"> No problem Vendo got you! </h2>
+            <h6> <span class="invisible">-</span></h6>
+            <h4>We provide Storefront Window Display Advertising and Digital signage advertising on bombproof recycling bins in Birmingham.</h4>
           </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</header>
-
-<div class="home-main">
-<%# fist box %>
-
-  <div class="home-text-1">
-    <div class="row">
-      <div class="col-md-9 centering-for-900 d-flex ">
-        <div class="vendo-logo-home">
-          <%= image_tag "vendo-logo.png"%>
         </div>
-        <div>
-          <h1>The Future begins</h1>
-          <h1 > with <span class="light-blue"><strong>VENDO</strong></span></h1>
+
+        <div class="question-2-home fade-in-work">
+          <div class="col-md-9 centering-for-900">
+            <h2> You are a Store Owner?</h2>
+            <h2 class="light-blue"> Become our partner! </h2>
+            <h6> <span class="invisible">-</span></h6>
+            <h4>Earn monthly compensations. Vendo will not only provide the displays, but we will take care of the setup and installation. Our support is always available. We only ask for a fraction of your shop window space. Earn up to 20% of the display’s revenue. This provides you with a reliable and solid supplementary income.</h4>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-<%# second box %>
+    <%# third box %>
 
-  <div class="question-container ">
-
-    <div class="question-1-home ">
-      <div class="col-md-9 centering-for-900 animated1" >
-        <h2> Need Advertising?</h2>
-        <h2 class="light-blue"> No problem Vendo got you! </h2>
-        <h6> <span class="invisible">-</span></h6>
-        <h4>We provide Storefront Window Display Advertising and Digital signage advertising on bombproof recycling bins in Birmingham.</h4>
+      <div class="home-text-2 fade-in-work">
+        <div class="row">
+          <div class="col-md-9 centering-for-900">
+            <h1 > Getting <span class="light-blue">Started</span></h1>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="question-2-home ">
-      <div class="col-md-9 centering-for-900 animated1">
-        <h2> You are a Store Owner?</h2>
-        <h2 class="light-blue"> Become our partner! </h2>
-        <h6> <span class="invisible">-</span></h6>
-        <h4>Earn monthly compensations. Vendo will not only provide the displays, but we will take care of the setup and installation. Our support is always available. We only ask for a fraction of your shop window space. Earn up to 20% of the display’s revenue. This provides you with a reliable and solid supplementary income.</h4>
+
+      <div class="question-container ">
+
+        <div class="question-1-home fade-in-work">
+          <div class="col-md-9 centering-for-900" >
+            <h2> Already have an <span class="light-blue">advertising video?</span></h2>
+            <h6> <span class="invisible">-</span></h6>
+            <h4>Perfect, simply book your screen online through this website or through our soon-to-come app and attach your video to your booking request.</h4>
+          </div>
+        </div>
+
+        <div class="question-2-home fade-in-work">
+          <div class="col-md-9 centering-for-900">
+            <h2> Need an <span class="light-blue">Advertising Campaign?</span></h2>
+            <h6> <span class="invisible">-</span></h6>
+            <h4>No Problem! Vendo's team will happily help you create an eye-catching advertising campaign and support you through your amazing journey.</h4>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </div>
 
-<%# third box %>
+    <%# forth box %>
 
-  <div class="home-text-2">
-    <div class="row">
-      <div class="col-md-9 centering-for-900">
-        <h1 > Getting <span class="light-blue">Started</span></h1>
+      <div class="home-text-3 fade-in-work">
+        <div class="row">
+          <div class="col-md-9 centering-for-900">
+            <h1 > How to Book <span class="light-blue">a Screen</span></h1>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
 
-  <div class="question-container ">
+      <div class="question-container">
 
-    <div class="question-1-home">
-      <div class="col-md-9 centering-for-900 animated2" >
-        <h2> Already have an <span class="light-blue">advertising video?</span></h2>
-        <h6> <span class="invisible">-</span></h6>
-        <h4>Perfect, simply book your screen online through this website or through our soon-to-come app and attach your video to your booking request.</h4>
+        <div class="instruction-1-home slide-in-left">
+          <div class="col-md-7 centering-for-900" >
+            <h1 class="light-blue"><strong>1.</strong></h1>
+            <h3>Choose one or many screens of your liking at your preferred location <%= link_to "here", listings_path, class:"btn-home-here", role:"button" %></h3>
+          </div>
+        </div>
+
+        <div class="instruction-2-home slide-in-right">
+          <div class="col-md-7 centering-for-900">
+            <h1 class="light-blue"><strong>2.</strong></h1>
+            <h3>Decide from when to when your want your ads to run. You can later extend the duration by simply writing us an email</h3>
+          </div>
+        </div>
+
       </div>
-    </div>
 
-    <div class="question-2-home">
-      <div class="col-md-9 centering-for-900 animated2">
-        <h2> Need an <span class="light-blue">Advertising Campaign?</span></h2>
-        <h6> <span class="invisible">-</span></h6>
-        <h4>No Problem! Vendo's team will happily help you create an eye-catching advertising campaign and support you through your amazing journey.</h4>
+      <div class="question-container">
+
+        <div class="instruction-1-home slide-in-left">
+          <div class="col-md-7 centering-for-900" >
+            <h1 class="light-blue"><strong>3.</strong></h1>
+            <h3>Upload your advertisement video or picture with 2 clicks where indicated and finish your booking request. Now you have to wait for our approval (approx. 6h)</h3>
+          </div>
+        </div>
+
+        <div class="instruction-2-home slide-in-right">
+          <div class="col-md-7 centering-for-900">
+            <h1 class="light-blue"><strong>4.</strong></h1>
+            <h3>When approved simply pay by pushing the button and following the instructions that will appear under your request <%= link_to "here", bookings_path, class:"btn-home-here", role:"button" %> and see your advertisements up and running in a given location</h3>
+          </div>
+        </div>
+
       </div>
-    </div>
 
-  </div>
+      <%# fifth box %>
 
-<%# forth box %>
-
-  <div class="home-text-3">
-    <div class="row">
-      <div class="col-md-9 centering-for-900">
-        <h1 > How to Book <span class="light-blue">a Screen</span></h1>
+      <div class="home-text-2">
+        <div class="row">
+          <div class="col-md-9 centering-for-900 fade-in-work">
+            <h1 > Still not <span class="light-blue">Sure?</span></h1>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
 
-  <div class="question-container">
+      <div class="question-container">
 
-    <div class="instruction-1-home animated3">
-      <div class="col-md-7 centering-for-900" >
-        <h1 class="light-blue"><strong>1.</strong></h1>
-        <h3>Choose one or many screens of your liking at your preferred location <%= link_to "here", listings_path, class:"btn-home-here", role:"button" %></h3>
-      </div>
-    </div>
+        <div class="question-1-home fade-in-work">
+          <div class="col-md-9 centering-for-900" >
+            <h2> Why go <span class="light-blue">digital </span> over analog?</h2>
+            <h6> <span class="invisible">-</span></h6>
+            <h4>Digital storefront window advertising is the way forward to get your business or product caught sight of in the urban space. Not only is digital advertising more efficient and effective, but also more sustainable.</h4>
+          </div>
+        </div>
 
-    <div class="instruction-2-home animated5">
-      <div class="col-md-7 centering-for-900">
-        <h1 class="light-blue"><strong>2.</strong></h1>
-        <h3>Decide from when to when your want your ads to run. You can later extend the duration by simply writing us an email</h3>
-      </div>
-    </div>
+        <div class="question-2-home fade-in-work">
+          <div class="col-md-9 centering-for-900 ">
+            <h2> Eye-Catching <span class="light-blue">Advertisement</span></h2>
+            <h6> <span class="invisible">-</span></h6>
+            <h4>Digital Signage Screens remain well-positioned to capture attention, even in the digital era. In fact, if anything, since they are digital, they are even more eye-catching than static billboards. This has helped digital out-of-home advertising stay relevant at a time when so many traditional forms of marketing have fallen out of favor.</h4>
+          </div>
+        </div>
 
-  </div>
-
-  <div class="question-container">
-
-    <div class="instruction-1-home animated4">
-      <div class="col-md-7 centering-for-900" >
-        <h1 class="light-blue"><strong>3.</strong></h1>
-        <h3>Upload your advertisement video or picture with 2 clicks where indicated and finish your booking request. Now you have to wait for our approval (approx. 6h)</h3>
-      </div>
-    </div>
-
-    <div class="instruction-2-home animated6">
-      <div class="col-md-7 centering-for-900">
-        <h1 class="light-blue"><strong>4.</strong></h1>
-        <h3>When approved simply pay by pushing the button and following the instructions that will appear under your request <%= link_to "here", bookings_path, class:"btn-home-here", role:"button" %> and see your advertisements up and running in a given location</h3>
-      </div>
-    </div>
-
-  </div>
-
-  <%# fifth box %>
-
-  <div class="home-text-2">
-    <div class="row">
-      <div class="col-md-9 centering-for-900">
-        <h1 > Still not <span class="light-blue">Sure?</span></h1>
       </div>
     </div>
   </div>
-
-
-  <div class="question-container">
-
-    <div class="question-1-home">
-      <div class="col-md-9 centering-for-900 animated7" >
-        <h2> Why go <span class="light-blue">digital </span> over analog?</h2>
-        <h6> <span class="invisible">-</span></h6>
-        <h4>Digital storefront window advertising is the way forward to get your business or product caught sight of in the urban space. Not only is digital advertising more efficient and effective, but also more sustainable.</h4>
-      </div>
-    </div>
-
-    <div class="question-2-home">
-      <div class="col-md-9 centering-for-900 animated7">
-        <h2> Eye-Catching <span class="light-blue">Advertisement</span></h2>
-        <h6> <span class="invisible">-</span></h6>
-        <h4>Digital Signage Screens remain well-positioned to capture attention, even in the digital era. In fact, if anything, since they are digital, they are even more eye-catching than static billboards. This has helped digital out-of-home advertising stay relevant at a time when so many traditional forms of marketing have fallen out of favor.</h4>
-      </div>
-    </div>
-
-  </div>
-</div>
+</body>

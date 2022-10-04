@@ -1,0 +1,38 @@
+// Normal Fade in Animation
+
+.fade-in-work {
+  opacity: 0;
+  transition: opacity 600ms ease-in, transform 450ms ease-in;
+  line-height: 200px;
+  transform: translateY(20%);
+}
+
+.fade-in-work.appear {
+  opacity: 1;
+  line-height: 0px;
+  transform: translateY(0);
+}
+
+// Sliding into view form left and right
+
+
+.slide-in-left {
+  grid-column: 2 / 3;
+  transform: translateX(-10%);
+  transition: opacity 600ms ease-in, transform 700ms ease-in;
+  opacity: 0;
+}
+
+.slide-in-right {
+  grid-column: 3 / 4;
+  transform: translateX(10%);
+  transition: opacity 600ms ease-in, transform 700ms ease-in;
+  opacity: 0;
+}
+
+
+.slide-in-left.appear,
+.slide-in-right.appear {
+  transform: translateX(0);
+  opacity: 1;
+}
