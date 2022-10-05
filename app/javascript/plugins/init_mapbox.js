@@ -14,7 +14,7 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/paulieichhorn/ckzctsfef001614l881ffi97i',
     });
-    map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken, mapboxgl: mapboxgl }));
+    // map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken, mapboxgl: mapboxgl }));
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window); // add this
