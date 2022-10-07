@@ -41,8 +41,7 @@
     // border-top: 1px solid #fff;
     // border-left: 1px solid #fff;
     // border-bottom: 1px solid #fff;
-    backdrop-filter: blur(3rem);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(59, 59, 59, 0.8);
     display: flex;
     height: 80px;
     align-items: center;
@@ -53,6 +52,13 @@
     padding-left: 15px;
     padding-right:  50px;
   }
+
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+    backdrop-filter: blur(1rem);
+    background: rgba(0, 0, 0, 0.1);
+ }
+}
 
   // The navbar links
 
@@ -208,7 +214,6 @@
   .mobile-nav-toggle {
     display: block;
     position: absolute;
-    top: 2rem;
     right: 2rem;
     z-index: 9999;
     width: 50px;
@@ -302,12 +307,3 @@
     padding: 0.5rem 1rem;
   }
 }
-
-
-//for firefox;:
-//@supports (backdrop-filter: blur(1rem)) {
-//  .primary-navigation {
-      //backdrop-filter: blur (2rem);
-      // backgound: hsl(0, 0%, 100%, 0.1);
-//  }
-//}
