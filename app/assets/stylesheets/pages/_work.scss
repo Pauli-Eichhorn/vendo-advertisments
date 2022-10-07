@@ -24,7 +24,7 @@
 .header-work {
   position: sticky;
   top: 0;
-  background-image: url(image_path('final-work-image.png'));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(image_path('final-work-image.png'));
   background-size: cover;
   height: 100%;
 }
@@ -39,10 +39,18 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 50px;
-  text-shadow: 0 0 5px rgb(40, 40, 40);
-  color: white;
+  font-family: sans-serif;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px #fff;
+  background-image: url(image_path('back-animation.png'));
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+  white-space: nowrap;
+  font-size: 12vw;
 }
+
 
 
 .bottom-box-work-around {
