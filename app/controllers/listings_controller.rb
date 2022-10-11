@@ -5,7 +5,7 @@ class ListingsController < ApplicationController
       sql_query = "name ILIKE :query OR description ILIKE :query"
       @listings = Listing.where(sql_query, query: "%#{params[:query]}%")
     else
-      @listings = Listing.all
+      @pagy, @listings = pagy(Listing.all)
     end
 
     @markers = @listings.geocoded.map do |listing|
