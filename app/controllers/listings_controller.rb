@@ -2,8 +2,8 @@ class ListingsController < ApplicationController
   def index
 
     if params[:query].present?
-      sql_query = "name ILIKE :query OR description ILIKE :query"
-      @listings = Listing.where(sql_query, query: "%#{params[:query]}%")
+      sql_query = "name ILIKE :query OR description ILIKE :query OR location ILIKE :query "
+      @pagy, @listings = pagy(Listing.where(sql_query, query: "%#{params[:query]}%"))
     else
       @pagy, @listings = pagy(Listing.all)
     end
