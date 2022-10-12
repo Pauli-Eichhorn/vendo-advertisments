@@ -12,13 +12,21 @@
             <%= f.input :first_name,
                         required: true,
                         autofocus: true,
-                        input_html: { autocomplete: "first-name" }%>
+                        input_html: { autocomplete: "first-name" },
+                        hint: 'If this is a business account please fill this field with a -',
+                        label: 'First name'
+                        %>
+
           </div>
           <div class="ml-2">
             <%= f.input :last_name,
                         required: true,
                         autofocus: true,
-                        input_html: { autocomplete: "last-name" }%>
+                        input_html: { autocomplete: "last-name" },
+                        label: 'Last name',
+                        hint: 'If this is a business account please fill this field with the Companies name'
+                        %>
+
           </div>
         </div>
 
@@ -33,7 +41,10 @@
         <%= f.input :address,
                     required: true,
                     autofocus: true,
-                    input_html: { autocomplete: "address" }%>
+                    input_html: { autocomplete: "address" },
+                    label: "address and house number "
+                    %>
+
 
         <div class="d-flex">
           <div class="mr-2">
@@ -65,12 +76,15 @@
                     input_html: { autocomplete: "new-password" } %>
         <%= f.input :password_confirmation,
                     required: true,
-                    input_html: { autocomplete: "new-password" } %>
+                    input_html: { autocomplete: "new-password" },
+                    label: "Confirm password"
+                    %>
+
       </div>
 
 
-      <div class="form-actions-btn text-center">
-        <%= f.button :submit, "sign up", id:'btn-signup' %>
+      <div class="form-actions-btn text-center mb-1">
+        <%= f.button :submit, "sign up", class: "login-button" %>
       </div>
     <% end %>
   </div>
