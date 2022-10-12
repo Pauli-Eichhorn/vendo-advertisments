@@ -101,3 +101,15 @@
 .text-new-password:hover {
   color: rgb(208, 202, 202);
 }
+
+abbr[title] {
+  text-decoration: none !important;
+}
+
+.link_to_color_change {
+  color: #fff
+}
+
+.link_to_color_change:hover {
+  color: #00bbff
+}
