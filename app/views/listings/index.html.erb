@@ -27,9 +27,22 @@
                 <div class="col">
                   <%= link_to listing_path(listing) do %>
                     <div class='card-index'>
-
-                      <div>
-                        <%=  cl_image_tag listing.photo1.key, crop: :fill%>
+                      <div class="index-listing-outerimg-container">
+                        <div class="index-listing-img-container">
+                          <div class="img-box1-index-listing"><%=  cl_image_tag listing.photo1.key, crop: :fill%></div>
+                          <% if listing.photo2.present? %>
+                            <div class="img-box2-index-listing"><%=  cl_image_tag listing.photo2.key, crop: :fill%></div>
+                          <% end %>
+                          <% if listing.photo3.present? %>
+                            <div class="img-box3-index-listing"><%=  cl_image_tag listing.photo3.key, crop: :fill%></div>
+                          <% end %>
+                          <% if listing.photo4.present? %>
+                            <div class="img-box4-index-listing"><%=  cl_image_tag listing.photo4.key, crop: :fill%></div>
+                          <% end %>
+                          <% if listing.photo5.present? %>
+                            <div class="img-box5-index-listing"><%=  cl_image_tag listing.photo5.key, crop: :fill%></div>
+                          <% end %>
+                        </div>
                       </div>
                       <div class='card-index-content'>
 
