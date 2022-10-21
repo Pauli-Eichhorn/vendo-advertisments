@@ -1,6 +1,6 @@
 @media (min-width:630px) {
   .footer {
-    background: rgb(0, 0, 0);
+    background: rgb(10, 10, 10);
     display: flex;
     align-items: center;
     text-align: left;
@@ -78,11 +78,11 @@
 
 @media ( max-width:630px) {
   .footer {
-    background: rgb(0, 0, 0);
+    background: rgb(10, 10, 10);;
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    height: 400px;
+    height: 450px;
     color: #999D9F !important;
     position: relative;
     bottom: 0;
@@ -116,11 +116,7 @@
   .foot-link {
     text-align: left;
     color: #999D9F ;
-  }
-
-  .footer-links {
-    margin-top: 30px;
-
+    font-size: 22px;
   }
 
   .footer-info {
@@ -128,7 +124,7 @@
   }
 
   .foot-link:hover {
-    color: rgb(255, 108, 108);
+    color: #86ddff;
   }
 
   .phone-logo {

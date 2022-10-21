@@ -51,6 +51,7 @@
 //   }
 // }
 
+
 @media (max-width: 999px) {
   .cards-home {
     justify-content: center;
@@ -74,11 +75,26 @@
     text-decoration: none;
   }
 
-  .card-index img {
-    height: 190px;
-    width: 350px;
-    border: 1px solid white;
-    border-radius: 10px;
+  .index-listing-img-container {
+    overflow-x: scroll;
+    height: 200px !important;
+    width: 300px !important;
+    border-radius: 15px;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .index-listing-img-container img {
+    height: 200;
+    width: 300;
+    object-fit: cover;
+
+  }
+
+  .index-listing-img-container div {
+    scroll-snap-align: center;
   }
 
   .card-index-content {
@@ -118,20 +134,47 @@
     text-decoration: none;
   }
 
-  .card-index img {
+  // .card-index img {
+  //   height: 200;
+  //   width: 300;
+  //   border-radius: 15px;
+  //   margin-top:20;
+  //   object-fit: cover;
+  // }
+  //Scrolling through imgs
+
+  .index-listing-outerimg-container {
+    height: 200px !important;
+    width: 300px !important;
+    margin-top: 20;
+  }
+
+  .index-listing-img-container {
+    overflow-x:scroll;
+    height: 200px !important;
+    width: 300px !important;
+    border-radius: 15px;
+    display: flex;
+    scroll-snap-type: x mandatory;
+  }
+
+  .index-listing-img-container div {
+    scroll-snap-align: center;
+  }
+
+  .index-listing-img-container img{
     height: 200;
     width: 300;
-    border-radius: 15px;
-    margin-top:20;
+    object-fit: cover;
+
   }
+
   .card-index-content {
     margin: auto;
     padding-left: 20px;
     padding-right: 20px;
   }
-//   .mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
-//   margin-top: 110px;
-// }
+
 
   .pagination-nav-container {
     align-items: center;
@@ -141,6 +184,7 @@
     display: flex;
   }
 }
+
 .search-bar {
   margin-top: 35px;
   margin-bottom: 35px;

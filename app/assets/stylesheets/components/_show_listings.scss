@@ -4,10 +4,13 @@
   margin: 50px;
 }
 .show-container img {
-  height: auto;
-  width: 50%;
-  object-fit: cover;
   border-radius: 15px;
+}
+
+.images-show-multi {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .info-text{
@@ -18,6 +21,39 @@
   margin-top: 50px;
 }
 
+@media ( min-width:765px) and ( max-width:950px){
+  .carousel-i1 img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  }
+}
+@media ( min-width:950px){
+  .carousel-i1 img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  }
+}
+
+@media ( min-width:580px) and ( max-width:765px){
+  .carousel-i1 img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  }
+}
+
+@media ( max-width:580px){
+  .carousel-i1 img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  }
+}
+
+//Button 28
+
 .button-28 {
   appearance: none;
   background-color: rgb(12, 12, 15);
@@ -27,7 +63,7 @@
   color: rgb(230, 230, 230);
   cursor: pointer;
   display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -62,8 +98,6 @@
   transform: translateY(0);
 }
 
-
-
 .button-28-small {
   appearance: none;
   background-color: transparent;
@@ -73,7 +107,7 @@
   color: #3B3B3B;
   cursor: pointer;
   display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -106,38 +140,4 @@
 .button-28-small:active {
   box-shadow: none;
   transform: translateY(0);
-}
-
-
-.images-show-multi1 {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media ( min-width:765px) and ( max-width:950px){
-  .carousel-i1 img {
-  width: 100%;
-  height: 400px;
-  }
-}
-@media ( min-width:950px){
-  .carousel-i1 img {
-  width: 100%;
-  height: 500px;
-  }
-}
-
-@media ( min-width:580px) and ( max-width:765px){
-  .carousel-i1 img {
-  width: 100%;
-  height: 300px;
-  }
-}
-
-@media ( max-width:580px){
-  .carousel-i1 img {
-  width: 100%;
-  height: 200px;
-  }
 }
